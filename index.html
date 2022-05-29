@@ -3,14 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <!-- <link rel="icon" type="image/svg+xml" href="favicon.svg" /> -->
-    <link rel="stylesheet" type="text/css" href="style.css" media="All">
+    <link rel="stylesheet" type="text/css" href="css/media.css" media="All">
+    <link rel="stylesheet" type="text/css" href="css/flex.css" media="All">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="All">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify Clone</title>
   </head>
   <body>
-    <div id="app">
-      Spotify Clone
-    </div>
-    <script type="module" src="/main.js"></script>
+    <main class="h-100 flex column bg-primary">
+
+      <!-- Content -->
+      <div class="paper flex grow">
+
+        <!-- Left Aside -->
+        <div class="h-100 min-width-200">
+          <ul class="h-100 flex column grow" style="border: 1px solid black">
+            <li>Item a</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+            <li>Item b</li>
+          </ul>
+        </div>
+
+        <!-- Body -->
+        <div class="flex grow column">
+
+          <!-- Header -->
+          <div class="flex" style="min-height: 50px">
+            <p>Header</p>
+          </div>
+
+          <div class="flex grow between">
+            <!-- Center Content -->
+            <div class="flex grow" style="border-top: 1px solid black">
+              <p>Body</p>
+            </div>
+            <!-- Right ASide -->
+            <div class="flex min-width-150" style="border: 1px solid black">
+              <ul class="h-100 flex column grow">
+                <li>Item a</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+                <li>Item b</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="player">
+        <p>Footer</p>
+      </div>
+
+    </main>
   </body>
+  <script type="module" src="/main.js"></script>
 </html>
