@@ -80,7 +80,9 @@ ul {
 .bg-complementary {
     background-color: var(--complementary);
 }
-
+.bg-green {
+    background-color: var(--primary);
+}
 /* Native Paper */
 .paper {
     overflow: hidden;
