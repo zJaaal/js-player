@@ -36,13 +36,13 @@ ul {
     font-weight: 300;
 }
 .font-normal {
-font-weight: 400;
+    font-weight: 400;
 }
 .font-medium {
-font-weight: 500;
+    font-weight: 500;
 }
 .font-bold {
-font-weight: 700;
+    font-weight: 700;
 }
 /* Background colors */
 .bg-primary {
