@@ -3,14 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <!-- <link rel="icon" type="image/svg+xml" href="favicon.svg" /> -->
-    <link rel="stylesheet" type="text/css" href="style.css" media="All">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d34ae7d623.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/media.css" media="All">
+    <link rel="stylesheet" type="text/css" href="css/flex.css" media="All">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="All">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spotify Clone</title>
+    <title>JS Player</title>
   </head>
   <body>
-    <div id="app">
-      Spotify Clone
-    </div>
-    <script type="module" src="/main.js"></script>
+    <main class="h-100 flex column bg-complementary">
+
+      <!-- Content -->
+      <div class="paper flex grow">
+
+        <!-- Left Aside -->
+        <div class="h-100 min-width-200">
+          <ul class="h-100 flex column grow bg-secondary">
+            <li class="text text-primary">Item a</li>
+            <li class="text text-primary">Item b</li>
+            <li class="text text-primary">Item b</li>
+            <li class="text text-primary">Item b</li>
+            <li class="text text-primary">Item b</li>
+            <li class="text text-primary">Item a</li>
+            <li class="text text-primary">Item b</li>
+            <li class="text text-primary">Item b</li>
+            <li class="text text-primary">Item b</li>
+            <li class="text text-primary">Item b</li>
+            <li class="text text-primary">Item a</li>
+            <li class="text text-primary">Item b</li>
+            <li class="text text-primary">Item b</li>
+            <li class="text text-primary">Item b</li>
+            <li class="text text-primary">Item b</li>
+          </ul>
+        </div>
+
+        <!-- Body -->
+        <div class="flex grow column">
+
+          <!-- Header -->
+          <div class="flex center bg-complementary" style="min-height: 50px">
+            <i class="fa-solid fa-magnifying-glass text-primary"></i>
+            <p class="text-title text-primary">Header</p>
+          </div>
+          
+          <!-- Center Content -->
+          <div class="flex grow bg-primary">
+            <p class="text-primary">Body</p>
+          </div>
+
+        </div>
+
+        <!-- Right ASide -->
+        <div class="flex min-width-200 bg-secondary">
+          <ul class="h-100 flex column grow">
+            <li class="text-primary">Item a</li>
+            <li class="text-primary">Item b</li>
+            <li class="text-primary">Item b</li>
+            <li class="text-primary">Item b</li>
+            <li class="text-primary">Item b</li>
+            <li class="text-primary">Item b</li>
+            <li class="text-primary">Item b</li>
+            <li class="text-primary">Item b</li>
+            <li class="text-primary">Item b</li>
+            <li class="text-primary">Item a</li>
+            <li class="text-primary">Item b</li>
+            <li class="text-primary">Item b</li>
+            <li class="text-primary">Item b</li>
+            <li class="text-primary">Item b</li>
+            <li class="text-primary">Item b</li>
+            <li class="text-primary">Item b</li>
+            <li class="text-primary">Item b</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+      <div class="player bg-complementary">
+        <p class="text-title text-primary">Now Playing</p>
+        <p class="text-subtitle text-select"> Cotis - Reckless </p>
+        <i class="fa-solid fa-music"></i>
+      </div>
+
+    </main>
   </body>
+  <script type="module" src="/main.js"></script>
 </html>
