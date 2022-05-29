@@ -44,11 +44,14 @@
         <div class="flex grow column">
 
           <!-- Header -->
-          <div class="flex center bg-complementary min-height-50">
-            <i class="fa-solid fa-magnifying-glass text-primary"></i>
-            <p class="text-title text-primary">Header</p>
-          </div>
-          
+          <header>
+            <div class="container bg-complementary min-height-50">
+              <div class="flex relative search-bar">
+                  <input class="grow center search-bar-input" type="text" name="search-bar" id="" placeholder="Artist, Album, Track">
+                  <i class="fa-solid fa-magnifying-glass search-bar-icon text-primary"></i>
+              </div>
+            </div>
+          </header>          
           <!-- Center Content -->
           <div class="flex grow bg-primary">
             <p class="text-primary">Body</p>
@@ -85,7 +88,6 @@
       <div class="player bg-complementary">
         <p class="text-title text-primary">Now Playing</p>
         <p class="text-subtitle text-select"> Cotis - Reckless </p>
-        <i class="fa-solid fa-music"></i>
       </div>
 
     </main>

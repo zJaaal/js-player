@@ -99,3 +99,31 @@ ul {
 .player {
     min-height: 150px;
 }
+
+/* Position */
+.relative{
+    position: relative;
+}
+/* Search bar */
+.search-bar {
+    top:0;
+    transform:translateY(50%);
+    margin-left: 10px;
+}
+/* Search icon  */
+.search-bar-icon {
+    padding-top: 3px;
+    font-size: 15px;
+    position: absolute;
+    left: 0;
+}
+/* Search bar input */
+.search-bar-input {
+    color: var(--font);
+    padding-left: 20px;
+    font-size: 20px;
+    border: none;
+    background: none;
+    outline: none;
+
+}
