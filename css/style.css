@@ -22,13 +22,13 @@ ul {
     --complementary: #2e2c2fff;
 }
 /* Text colors */
-.font-color-primary {
+.text-primary {
     color: var(--font);
 }
-.font-color-select {
+.text-select {
     color: var(--primary);
 }
-.font-color-warning {
+.text-warning {
     color: var(--secundary);
 }
 /* Font variants*/
