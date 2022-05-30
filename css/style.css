@@ -37,21 +37,18 @@ ul {
     font-size: 2.125rem;
     line-height: 1.235;
     letter-spacing: 0.00735em;
-    margin-bottom: 0.35em;
 }
 .text-subtitle {
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.75;
     letter-spacing: 0.00938em;
-    margin-bottom: 0.35em;
 }
 .text {
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.00938em;
-    margin-bottom: 0.35em;
 }
 .text-button {
     font-weight: 500;
@@ -59,7 +56,6 @@ ul {
     line-height: 1.75;
     letter-spacing: 0.02857em;
     text-transform: uppercase;
-    margin-bottom: 0.35em;
     display: block;
 }
 .text-caption {
@@ -67,8 +63,11 @@ ul {
     font-size: 0.75rem;
     line-height: 1.66;
     letter-spacing: 0.03333em;
-    margin-bottom: 0.35em;
     display: block;
+}
+/* Overflow Wrap */
+.text-wrap {
+    overflow-wrap: break-word;
 }
 /* Background colors */
 .bg-primary {
@@ -98,4 +97,22 @@ ul {
 /* Player */
 .player {
     min-height: 150px;
+}
+
+/* Album Art */
+.album-art {
+    width: 130px;
+}
+
+/* Album Art Image */
+.album-art-image {
+    height: 130px;
+}
+
+/* Album Art Icon */
+.album-icon {
+    font-size: 10px;
+    margin-right: 5px;
+    margin-top: 3px;
+    color: var(--primary);
 }
