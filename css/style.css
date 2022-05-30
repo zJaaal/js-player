@@ -14,12 +14,14 @@ ul {
 
 /* Theme */
 :root {
-    --primary: #39df4aff;
-    --secundary: #de3a3aff;
-    --background: #161615ff;
-    --background-shade: #2a2925ff;
-    --font: #e7e7e7ff;
-    --complementary: #2e2c2fff;
+    --primary: #058C42;
+    --secundary: #de3a3a;
+    --background: #161615;
+    --background-shade: #2a2925;
+    --font: #e7e7e7;
+    --complementary: #2e2c2f;
+
+    --margin-size: 4px;
 }
 /* Text colors */
 .text-primary {
@@ -37,21 +39,18 @@ ul {
     font-size: 2.125rem;
     line-height: 1.235;
     letter-spacing: 0.00735em;
-    margin-bottom: 0.35em;
 }
 .text-subtitle {
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.75;
     letter-spacing: 0.00938em;
-    margin-bottom: 0.35em;
 }
 .text {
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.00938em;
-    margin-bottom: 0.35em;
 }
 .text-button {
     font-weight: 500;
@@ -59,7 +58,6 @@ ul {
     line-height: 1.75;
     letter-spacing: 0.02857em;
     text-transform: uppercase;
-    margin-bottom: 0.35em;
     display: block;
 }
 .text-caption {
@@ -67,7 +65,6 @@ ul {
     font-size: 0.75rem;
     line-height: 1.66;
     letter-spacing: 0.03333em;
-    margin-bottom: 0.35em;
     display: block;
 }
 /* Background colors */
@@ -86,7 +83,7 @@ ul {
     overflow: hidden;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-
+    background: none;
     /* just added this to visualize the border */
     border-bottom: 1px solid var(--primary);
     
@@ -98,4 +95,15 @@ ul {
 /* Player */
 .player {
     min-height: 150px;
+}
+
+/* List item */
+.list-item-image {
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.item-details {
+    margin-left: 5px;
+    margin-bottom: 5px;
 }
