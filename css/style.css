@@ -20,6 +20,8 @@ ul {
     --background-shade: #2a2925;
     --font: #e7e7e7;
     --complementary: #2e2c2f;
+
+    --margin-size: 4px;
 }
 /* Text colors */
 .text-primary {
@@ -93,30 +95,15 @@ ul {
 /* Player */
 .player {
     min-height: 150px;
-    background: none;
 }
 
-/* List image */
-.profile-image {
+/* List item */
+.list-item-image {
     height: 45px;
     border-radius: 50%;
+    overflow: hidden;
 }
-/* List item */
-.list-item {
-    margin-top: 15px;
-    margin-left: 5px
-}
-.list-item:nth-child(1) {
-    margin-top: 50px;
-}
-/* List item detail */
 .item-details {
     margin-left: 5px;
     margin-bottom: 5px;
-}
-/* More icon */
-.more-icon {
-    color: var(--font);
-    font-size: 1rem;
-    padding-left: 10px;
 }
