@@ -6,7 +6,7 @@
 html, body {
     width: 100%;
     height: 100%;
-    font-family: 'M PLUS Rounded 1c','Courier New', Courier, monospace;
+    font-family: 'M PLUS Rounded 1c','Courier New', Courier, monospace, sans-serif;
 }
 ul {
     list-style: none;
@@ -21,6 +21,7 @@ ul {
     --font: #e7e7e7ff;
     --complementary: #2e2c2fff;
 }
+
 /* Text colors */
 .text-primary {
     color: var(--font);
@@ -31,27 +32,25 @@ ul {
 .text-warning {
     color: var(--secundary);
 }
+
 /* Font variants*/
 .text-title {
     font-weight: 400;
     font-size: 2.125rem;
     line-height: 1.235;
     letter-spacing: 0.00735em;
-    margin-bottom: 0.35em;
 }
 .text-subtitle {
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.75;
     letter-spacing: 0.00938em;
-    margin-bottom: 0.35em;
 }
 .text {
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.00938em;
-    margin-bottom: 0.35em;
 }
 .text-button {
     font-weight: 500;
@@ -59,17 +58,14 @@ ul {
     line-height: 1.75;
     letter-spacing: 0.02857em;
     text-transform: uppercase;
-    margin-bottom: 0.35em;
-    display: block;
 }
 .text-caption {
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 1.66;
     letter-spacing: 0.03333em;
-    margin-bottom: 0.35em;
-    display: block;
 }
+
 /* Background colors */
 .bg-primary {
     background-color: var(--background);
@@ -79,6 +75,9 @@ ul {
 }
 .bg-complementary {
     background-color: var(--complementary);
+}
+.bg-green {
+    background-color: var(--primary);
 }
 
 /* Native Paper */
@@ -98,4 +97,31 @@ ul {
 /* Player */
 .player {
     min-height: 150px;
+}
+
+/* Position */
+.relative{
+    position: relative;
+}
+
+/* Cursor */
+.pointer {
+    cursor: pointer;
+}
+
+/* Search bar */
+.search-bar-icon {
+    position: absolute;
+    font-size: 15px;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.search-bar-input {
+    color: var(--font);
+    padding: 5px 0px 5px 30px;
+    font-size: 16px;
+    background: none;
+    outline: none;
+    border: none;
 }
