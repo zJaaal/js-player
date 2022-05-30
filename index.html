@@ -44,17 +44,22 @@
         <div class="flex grow column">
 
           <!-- Header -->
-          <header>
-            <div class="container bg-complementary min-height-50">
-              <div class="flex relative search-bar">
-                  <input class="grow center search-bar-input" type="text" name="search-bar" id="" placeholder="Artist, Album, Track">
-                  <i class="fa-solid fa-magnifying-glass search-bar-icon text-primary"></i>
+          <header class="bg-complementary min-height-50">
+            <div class="container h-100">
+              <div class="flex grow middle h-100 relative">
+                <input class="w-100 search-bar-input" type="text" name="search-bar" id="search-bar" placeholder="Artist, Album, Track">
+                <label class="search-bar-icon pointer text-primary" for="search-bar">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
               </div>
             </div>
-          </header>          
+          </header>
+
           <!-- Center Content -->
           <div class="flex grow bg-primary">
-            <p class="text-primary">Body</p>
+            <div class="container h-100">
+              <p class="text-primary">Body</p>
+            </div>
           </div>
 
         </div>
