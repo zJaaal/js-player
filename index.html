@@ -14,7 +14,7 @@
     <title>JS Player</title>
   </head>
   <body>
-    <main class="h-100 flex column bg-complementary">
+    <main class="h-100 flex column" style="background-color:var(--primary) ;">
 
       <!-- Content -->
       <div class="paper flex grow">
@@ -44,13 +44,13 @@
         <div class="flex grow column">
 
           <!-- Header -->
-          <div class="flex center bg-complementary" style="min-height: 50px">
+          <div class="flex center bg-secondary" style="min-height: 50px">
             <i class="fa-solid fa-magnifying-glass text-primary"></i>
             <p class="text-title text-primary">Header</p>
           </div>
           
           <!-- Center Content -->
-          <div class="flex grow bg-primary">
+          <div class="flex grow" style="background-color:var(--background-shade) ;">
             <p class="text-primary">Body</p>
           </div>
 
@@ -58,33 +58,113 @@
 
         <!-- Right ASide -->
         <div class="flex min-width-200 bg-secondary">
-          <ul class="h-100 flex column grow">
-            <li class="text-primary">Item a</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item a</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
+          <ul class="list">
+            <li class="list-item" data-artistId="1">
+              <div class="flex grow center">
+                <div class="list-item-image">
+                    <img class="profile-image" src="assets/profile-pictures/julia.jpg" alt="Profile Julia Michaels" />
+                </div>
+                <div class="flex grow column item-details">
+                    <p class="text text-primary">Julia Michaels</p>
+                    <p class="text-caption text-primary">5k followers</p>
+                </div>
+                <div class="flex center">
+                  <i class="fa-light fa-plus more-icon text"></i>
+                </div>
+              </div>
+            </li>
+            <li class="list-item" data-artistId="2">
+              <div class="flex grow center">
+                <div class="list-item-image">
+                    <img class="profile-image" src="assets/profile-pictures/badbunny.jpg" alt="Profile Bad Bunny" />
+                </div>
+                <div class="flex grow column item-details">
+                    <p class="text text-primary">Bad Bunny</p>
+                    <p class="text-caption text-primary">6M followers</p>
+                </div>
+                <div class="flex center">
+                  <i class="fa-light fa-plus more-icon text"></i>
+                </div>
+              </div>
+            </li>
+            <li class="list-item" data-artistId="3">
+              <div class="flex grow center">
+                <div class="list-item-image">
+                    <img class="profile-image" src="assets/profile-pictures/cotis.jpg" alt="Profile Cotis" />
+                </div>
+                <div class="flex grow column item-details">
+                    <p class="text text-primary">Cotis</p>
+                    <p class="text-caption text-primary">100 followers</p>
+                </div>
+                <div class="flex center">
+                  <i class="fa-light fa-plus more-icon text"></i>
+                </div>
+              </div>
+            </li>
+              <li class="list-item" data-artistId="4">
+                <div class="flex grow center">
+                  <div class="list-item-image">
+                      <img class="profile-image" src="assets/profile-pictures/bieber.jpg" alt="Profile Justin Bieber" />
+                  </div>
+                  <div class="flex grow column item-details">
+                      <p class="text text-primary">Justin Bieber</p>
+                      <p class="text-caption text-primary">3M followers</p>
+                  </div>
+                  <div class="flex center">
+                    <i class="fa-light fa-plus more-icon text"></i>
+                  </div>
+                </div>
+                </li>
+              <li class="list-item" data-artistId="5">
+                <div class="flex grow center">
+                  <div class="list-item-image">
+                      <img class="profile-image" src="assets/profile-pictures/sanluis.jpg" alt="Profile Sanluis" />
+                  </div>
+                  <div class="flex grow column item-details">
+                      <p class="text text-primary">Sanluis</p>
+                      <p class="text-caption text-primary">100k followers</p>
+                  </div>
+                  <div class="flex center">
+                    <i class="fa-light fa-plus more-icon text"></i>
+                  </div>
+                </div>
+              </li>
+              <li class="list-item" data-artistId="6">
+                <div class="flex grow center">
+                  <div class="list-item-image">
+                      <img class="profile-image" src="assets/profile-pictures/guaco.jpg" alt="Profile Guaco" />
+                  </div>
+                  <div class="flex grow column item-details">
+                      <p class="text text-primary">Guaco</p>
+                      <p class="text-caption text-primary">200k followers</p>
+                  </div>
+                  <div class="flex center">
+                    <i class="fa-light fa-plus more-icon text"></i>
+                  </div>
+                </div>
+              </li>
+              <li class="list-item" data-artistId="7">
+                <div class="flex grow center">
+                  <div class="list-item-image">
+                      <img class="profile-image" src="assets/profile-pictures/ayax.jpg" alt="Profile Ayax" />
+                  </div>
+                  <div class="flex grow column item-details">
+                      <p class="text text-primary">Ayax</p>
+                      <p class="text-caption text-primary">400k followers</p>
+                  </div>
+                  <div class="flex center">
+                    <i class="fa-light fa-plus more-icon text"></i>
+                  </div>
+                </div>
+              </li>
           </ul>
         </div>
-
       </div>
 
       <!-- Footer -->
-      <div class="player bg-complementary">
-        <p class="text-title text-primary">Now Playing</p>
-        <p class="text-subtitle text-select"> Cotis - Reckless </p>
+      <div class="player">
+        <p class="text-title" style="color: var(--background);">Now Playing</p>
+        <p class="text-subtitle" style="color: var(--background);"> Cotis - Reckless </p>
         <i class="fa-solid fa-music"></i>
       </div>
 
