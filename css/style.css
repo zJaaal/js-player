@@ -14,12 +14,14 @@ ul {
 
 /* Theme */
 :root {
-    --primary: #39df4aff;
-    --secundary: #de3a3aff;
-    --background: #161615ff;
-    --background-shade: #2a2925ff;
-    --font: #e7e7e7ff;
-    --complementary: #2e2c2fff;
+    --primary: #058C42;
+    --secundary: #de3a3a;
+    --background: #161615;
+    --background-shade: #2a2925;
+    --font: #e7e7e7;
+    --complementary: #2e2c2f;
+
+    --margin-size: 4px;
 }
 /* Text colors */
 .text-primary {
@@ -88,7 +90,7 @@ ul {
     overflow: hidden;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-
+    background: none;
     /* just added this to visualize the border */
     border-bottom: 1px solid var(--primary);
     
