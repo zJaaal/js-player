@@ -75,7 +75,7 @@ ul {
 .text-wrap {
     overflow-wrap: break-word;
 }
-}
+
 
 /* Background colors */
 .bg-primary {
@@ -141,15 +141,11 @@ ul {
 
 /* Album Art */
 .album-art {
-    width: 25%;
-    min-width: 200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 30px;
+    padding: 0px 15px 20px 15px;
 }
 .album-art-image {
-    width: 80%;
-    height: auto;
+    width: 150px;
+    height: 150px;
 }
 .album-icon {
     font-size: 10px;

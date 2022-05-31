@@ -21,7 +21,6 @@
     max-width: 992px;
     margin: auto;
 }
-
 /* margins */
 .ml {
     margin-left: var(--margin-size);
