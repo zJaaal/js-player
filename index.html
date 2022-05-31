@@ -14,14 +14,17 @@
     <title>JS Player</title>
   </head>
   <body>
-    <main class="h-100 flex column bg-complementary">
+    <main class="h-100 flex column" style="background-color: var(--primary);">
 
       <!-- Content -->
       <div class="paper flex grow">
 
         <!-- Left Aside -->
-        <div class="h-100 min-width-200">
-          <ul class="h-100 flex column grow bg-secondary">
+        <div id="left-aside" class="h-100 flex column min-width-200 bg-secondary">
+          <div class="flex grow min-height-50">
+            .
+          </div>
+          <ul class="h-100">
             <li class="text text-primary">Item a</li>
             <li class="text text-primary">Item b</li>
             <li class="text text-primary">Item b</li>
@@ -41,58 +44,327 @@
         </div>
 
         <!-- Body -->
-        <div class="flex grow column">
+        <div class="flex grow column bg-secondary">
 
           <!-- Header -->
-          <header class="bg-complementary min-height-50">
+          <header class="min-height-50">
             <div class="container h-100">
               <div class="flex grow middle h-100 relative">
-                <input class="w-100 search-bar-input" type="text" name="search-bar" id="search-bar" placeholder="Artist, Album, Track">
+                <input class="w-100 search-bar-input" type="text" name="search-bar" id="search-bar"
+                  placeholder="Artist, Album, Track">
                 <label class="search-bar-icon pointer text-primary" for="search-bar">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </label>
               </div>
             </div>
           </header>
-
+          
           <!-- Center Content -->
-          <div class="flex grow bg-primary">
-            <div class="container h-100">
-              <p class="text-primary">Body</p>
-            </div>
+          <div class="container">
+            <div class="flex wrap grow center bg-secondary" style="margin-top: 15px;">
+                <div class="flex column album-art">
+                  <img class="album-art-image" src="assets/album-art/julia-album.jpg" alt="Not In Chronological Order">
+                  <div class="flex middle">
+                    <span class="album-icon">
+                      <i class="fa-solid fa-user text-select"></i>
+                    </span>
+                    <p class="text-body text-primary">Julia Michaels</p>
+                  </div>
+                  <div class="flex">
+                    <span class="album-icon">
+                      <i class="fa-solid fa-compact-disc"></i>
+                    </span>
+                    <p class="text-caption text-primary">Not In Chronological Order</p>
+                  </div>
+                </div>
+                <div class="flex column album-art">
+                  <img class="album-art-image" src="assets/album-art/julia-album.jpg" alt="Not In Chronological Order">
+                  <div class="flex middle">
+                    <span class="album-icon">
+                      <i class="fa-solid fa-user text-select"></i>
+                    </span>
+                    <p class="text-body text-primary">Julia Michaels</p>
+                  </div>
+                  <div class="flex">
+                    <span class="album-icon">
+                      <i class="fa-solid fa-compact-disc"></i>
+                    </span>
+                    <p class="text-caption text-primary">Not In Chronological Order</p>
+                  </div>
+                </div>
+                <div class="flex column album-art">
+                  <img class="album-art-image" src="assets/album-art/badbunny-album.jpg" alt="X100PRE">
+                  <div class="flex middle">
+                    <span class="album-icon">
+                      <i class="fa-solid fa-user text-select"></i>
+                    </span>
+                    <p class="text-body text-primary">Bad Bunny</p>
+                  </div>
+                  <div class="flex">
+                    <span class="album-icon">
+                      <i class="fa-solid fa-compact-disc"></i>
+                    </span>
+                    <p class="text-caption text-primary">X100PRE</p>
+                  </div>
+                </div>
+                <div class="flex column album-art">
+                  <img class="album-art-image" src="assets/album-art/cotis-album.jpg" alt="Reckless">
+                  <div class="flex middle">
+                    <span class="album-icon">
+                      <i class="fa-solid fa-user text-select"></i>
+                    </span>
+                    <p class="text-body text-primary">Cotis</p>
+                  </div>
+                  <div class="flex">
+                    <span class="album-icon">
+                      <i class="fa-solid fa-compact-disc"></i>
+                    </span>
+                    <p class="text-caption text-primary">Reckless</p>
+                  </div>
+                </div>
+                <div class="flex column album-art">
+                  <img class="album-art-image" src="assets/album-art/bieber-album.jpg" alt="Changes">
+                  <div class="flex middle">
+                    <span class="album-icon">
+                      <i class="fa-solid fa-user text-select"></i>
+                    </span>
+                    <p class="text-body text-primary">Justin Bieber</p>
+                  </div>
+                  <div class="flex">
+                    <span class="album-icon">
+                      <i class="fa-solid fa-compact-disc"></i>
+                    </span>
+                    <p class="text-caption text-primary">Changes</p>
+                  </div>
+                </div>
+                <div class="flex column album-art">
+                  <img class="album-art-image" src="assets/album-art/sanluis-album.jpg" alt="No es igual">
+                  <div class="flex middle">
+                    <span class="album-icon">
+                      <i class="fa-solid fa-user text-select"></i>
+                    </span>
+                    <p class="text-body text-primary">Sanluis</p>
+                  </div>
+                  <div class="flex">
+                    <span class="album-icon">
+                      <i class="fa-solid fa-compact-disc"></i>
+                    </span>
+                    <p class="text-caption text-primary">No es igual</p>
+                  </div>
+                </div>
+                <div class="flex column album-art">
+                  <img class="album-art-image" src="assets/album-art/badbunny-album.jpg" alt="X100PRE">
+                  <div class="flex middle">
+                    <span class="album-icon">
+                      <i class="fa-solid fa-user text-select"></i>
+                    </span>
+                    <p class="text-body text-primary">Bad Bunny</p>
+                  </div>
+                  <div class="flex">
+                    <span class="album-icon">
+                      <i class="fa-solid fa-compact-disc"></i>
+                    </span>
+                    <p class="text-caption text-primary">X100PRE</p>
+                  </div>
+                </div>
+                <div class="flex column album-art">
+                  <img class="album-art-image" src="assets/album-art/cotis-album.jpg" alt="Reckless">
+                  <div class="flex middle">
+                    <span class="album-icon">
+                      <i class="fa-solid fa-user text-select"></i>
+                    </span>
+                    <p class="text-body text-primary">Cotis</p>
+                  </div>
+                  <div class="flex">
+                    <span class="album-icon">
+                      <i class="fa-solid fa-compact-disc"></i>
+                    </span>
+                    <p class="text-caption text-primary">Reckless</p>
+                  </div>
+                </div>
+              </div>
           </div>
-
         </div>
 
         <!-- Right ASide -->
-        <div class="flex min-width-200 bg-secondary">
-          <ul class="h-100 flex column grow">
-            <li class="text-primary">Item a</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item a</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
-            <li class="text-primary">Item b</li>
+        <div id="right-aside" class="flex column min-width-200 bg-secondary">
+          <div class="flex grow min-height-50">
+            .
+          </div>
+          <ul class="mr-3 list">
+            <li data-artistId="1">
+              <div class="flex grow center">
+                <div class="list-item-image">
+                    <img src="assets/profile-pictures/julia.jpg" alt="Profile Julia Michaels" height="100%" />
+                </div>
+                <div class="flex grow column ml mb">
+                    <p class="text text-primary">Julia Michaels</p>
+                    <p class="text-caption text-primary">5k followers</p>
+                </div>
+                <div class="flex center">
+                    <span class="pointer text text-primary">
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                </div>
+              </div>
+            </li>
+            <li class="mt-4" data-artistId="2">
+              <div class="flex grow center">
+                <div class="list-item-image">
+                    <img src="assets/profile-pictures/badbunny.jpg" alt="Profile Bad Bunny" height="100%" />
+                </div>
+                <div class="flex grow column ml-2 mb-2">
+                    <p class="text text-primary">Bad Bunny</p>
+                    <p class="text-caption text-primary">6M followers</p>
+                </div>
+                <div class="flex center">
+                    <span class="pointer text text-primary">
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                </div>
+              </div>
+            </li>
+            <li class="mt-4" data-artistId="3">
+              <div class="flex grow center">
+                <div class="list-item-image">
+                    <img src="assets/profile-pictures/cotis.jpg" alt="Profile Cotis" height="100%" />
+                </div>
+                <div class="flex grow column ml-2 mb-2">
+                    <p class="text text-primary">Cotis</p>
+                    <p class="text-caption text-primary">100 followers</p>
+                </div>
+                <div class="flex center">
+                    <span class="pointer text text-primary">
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                </div>
+              </div>
+            </li>
+              <li class="mt-4" data-artistId="4">
+                <div class="flex grow center">
+                  <div class="list-item-image">
+                      <img src="assets/profile-pictures/bieber.jpg" alt="Profile Justin Bieber" height="100%" />
+                  </div>
+                  <div class="flex grow column ml-2 mb-2">
+                      <p class="text text-primary">Justin Bieber</p>
+                      <p class="text-caption text-primary">3M followers</p>
+                  </div>
+                  <div class="flex center">
+                    <span class="pointer text text-primary">
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                  </div>
+                </div>
+                </li>
+              <li class="mt-4" data-artistId="5">
+                <div class="flex grow center">
+                  <div class="list-item-image">
+                      <img src="assets/profile-pictures/sanluis.jpg" alt="Profile Sanluis" height="100%" />
+                  </div>
+                  <div class="flex grow column ml-2 mb-2">
+                      <p class="text text-primary">Sanluis</p>
+                      <p class="text-caption text-primary">100k followers</p>
+                  </div>
+                  <div class="flex center">
+                    <span class="pointer text text-primary">
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="mt-4" data-artistId="6">
+                <div class="flex grow center">
+                  <div class="list-item-image">
+                      <img src="assets/profile-pictures/guaco.jpg" alt="Profile Guaco" height="100%" />
+                  </div>
+                  <div class="flex grow column">
+                      <p class="text text-primary">Guaco</p>
+                      <p class="text-caption text-primary">200k followers</p>
+                  </div>
+                  <div class="flex center">
+                    <span class="pointer text text-primary">
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="mt-4" data-artistId="7">
+                <div class="flex grow center">
+                  <div class="list-item-image">
+                      <img src="assets/profile-pictures/ayax.jpg" alt="Profile Ayax" height="100%" />
+                  </div>
+                  <div class="flex grow column ml-2 mb-2">
+                      <p class="text text-primary">Ayax</p>
+                      <p class="text-caption text-primary">400k followers</p>
+                  </div>
+                  <div class="flex center">
+                    <span class="pointer text text-primary">
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="mt-4" data-artistId="7">
+                <div class="flex grow center">
+                  <div class="list-item-image">
+                    <img src="assets/profile-pictures/ayax.jpg" alt="Profile Ayax" height="100%" />
+                  </div>
+                  <div class="flex grow column ml-2 mb-2">
+                    <p class="text text-primary">Ayax</p>
+                    <p class="text-caption text-primary">400k followers</p>
+                  </div>
+                  <div class="flex center">
+                    <span class="pointer text text-primary">
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="mt-4" data-artistId="7">
+                <div class="flex grow center">
+                  <div class="list-item-image">
+                    <img src="assets/profile-pictures/ayax.jpg" alt="Profile Ayax" height="100%" />
+                  </div>
+                  <div class="flex grow column ml-2 mb-2">
+                    <p class="text text-primary">Ayax</p>
+                    <p class="text-caption text-primary">400k followers</p>
+                  </div>
+                  <div class="flex center">
+                    <span class="pointer text text-primary">
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="mt-4" data-artistId="7">
+                <div class="flex grow center">
+                  <div class="list-item-image">
+                    <img src="assets/profile-pictures/ayax.jpg" alt="Profile Ayax" height="100%" />
+                  </div>
+                  <div class="flex grow column ml-2 mb-2">
+                    <p class="text text-primary">Ayax</p>
+                    <p class="text-caption text-primary">400k followers</p>
+                  </div>
+                  <div class="flex center">
+                    <span class="pointer text text-primary">
+                      <i class="fa-solid fa-xmark"></i>
+                    </span>
+                  </div>
+                </div>
+              </li>
           </ul>
         </div>
-
       </div>
 
       <!-- Footer -->
       <div class="player">
-        <p class="text-title text-primary">Now Playing</p>
-        <p class="text-subtitle text-primary"> Cotis - Reckless </p>
+        <div class="container mt-2">
+          <div class="flex column center">
+            <p class="text-title">Now Playing</p>
+            <p class="text-subtitle"> Cotis - Reckless </p>
+            <i class="fa-solid fa-music"></i>
+          </div>
+        </div>
       </div>
 
     </main>

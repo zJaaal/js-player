@@ -14,12 +14,14 @@ ul {
 
 /* Theme */
 :root {
-    --primary: #39df4aff;
-    --secundary: #de3a3aff;
-    --background: #161615ff;
-    --background-shade: #2a2925ff;
-    --font: #e7e7e7ff;
-    --complementary: #2e2c2fff;
+    --primary: #058C42;
+    --secundary: #de3a3a;
+    --background: #161615;
+    --background-shade: #2a2925;
+    --font: #e7e7e7;
+    --complementary: #2e2c2f;
+
+    --margin-size: 4px;
 }
 
 /* Text colors */
@@ -46,6 +48,9 @@ ul {
     line-height: 1.75;
     letter-spacing: 0.00938em;
 }
+.text-body {
+    font-size: 1.25rem;
+}
 .text {
     font-weight: 400;
     font-size: 1rem;
@@ -64,6 +69,12 @@ ul {
     font-size: 0.75rem;
     line-height: 1.66;
     letter-spacing: 0.03333em;
+    display: block;
+}
+/* Overflow Wrap */
+.text-wrap {
+    overflow-wrap: break-word;
+}
 }
 
 /* Background colors */
@@ -85,28 +96,23 @@ ul {
     overflow: hidden;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-
-    /* just added this to visualize the border */
-    border-bottom: 1px solid var(--primary);
-    
-     /* When you use this, it breakes the armony with the player
-     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15); 
-    */
-}
-
-/* Player */
-.player {
-    min-height: 150px;
+    background: none;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15); 
 }
 
 /* Position */
-.relative{
+.relative {
     position: relative;
 }
 
 /* Cursor */
 .pointer {
     cursor: pointer;
+}
+
+/* Player */
+.player {
+    min-height: 150px;
 }
 
 /* Search bar */
@@ -124,4 +130,59 @@ ul {
     background: none;
     outline: none;
     border: none;
+}
+
+/* List */
+.list-item-image {
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* Album Art */
+.album-art {
+    width: 25%;
+    min-width: 200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+}
+.album-art-image {
+    width: 80%;
+    height: auto;
+}
+.album-icon {
+    font-size: 10px;
+    margin-right: 5px;
+    margin-top: 3px;
+    color: white
+}
+
+
+/* Initial Value */
+#right-aside, #left-aside {
+    display: none;
+}
+
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (min-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #right-aside, #left-aside {
+        display: block;
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
 }
