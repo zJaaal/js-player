@@ -16,6 +16,11 @@
 .min-height-50 {
     min-height: 50px;
 }
+.container {
+    width: 100%;
+    max-width: 992px;
+    margin: auto;
+}
 
 /* margins */
 .ml {
