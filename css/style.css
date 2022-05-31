@@ -91,17 +91,19 @@ ul {
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     background: none;
-    /* just added this to visualize the border */
-    border-bottom: 1px solid var(--primary);
-    
-     /* When you use this, it breakes the armony with the player
-     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15); 
-    */
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15); 
 }
 
 /* Player */
 .player {
     min-height: 150px;
+}
+
+/* List */
+.list-item-image {
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 /* Album Art */
@@ -112,17 +114,42 @@ ul {
     padding-right: 15px;
     padding-bottom: 30px;
 }
-
-/* Album Art Image */
 .album-art-image {
     width: 80%;
     height: auto;
 }
-
-/* Album Art Icon */
 .album-icon {
     font-size: 10px;
     margin-right: 5px;
     margin-top: 3px;
     color: white
+}
+
+
+/* Initial Value */
+#right-aside, #left-aside {
+    display: none;
+}
+
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (min-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #right-aside, #left-aside {
+        display: block;
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
 }

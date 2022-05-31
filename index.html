@@ -14,17 +14,17 @@
     <title>JS Player</title>
   </head>
   <body>
-    <main class="h-100 flex column bg-complementary">
+    <main class="h-100 flex column" style="background-color: var(--primary);">
 
       <!-- Content -->
       <div class="paper flex grow">
 
         <!-- Left Aside -->
-        <div class="h-100 flex column min-width-200">
+        <div id="left-aside" class="h-100 flex column min-width-200 bg-secondary">
           <div class="flex grow min-height-50">
             .
           </div>
-          <ul class="h-100 bg-secondary">
+          <ul class="h-100">
             <li class="text text-primary">Item a</li>
             <li class="text text-primary">Item b</li>
             <li class="text text-primary">Item b</li>
@@ -180,11 +180,11 @@
         </div>
 
         <!-- Right ASide -->
-        <div class="flex column min-width-200 bg-secondary">
+        <div id="right-aside" class="flex column min-width-200 bg-secondary">
           <div class="flex grow min-height-50">
             .
           </div>
-          <ul class="ml-2 mr-2 list">
+          <ul class="mr-3 list">
             <li data-artistId="1">
               <div class="flex grow center">
                 <div class="list-item-image">
@@ -351,9 +351,13 @@
 
       <!-- Footer -->
       <div class="player">
-        <p class="text-title">Now Playing</p>
-        <p class="text-subtitle"> Cotis - Reckless </p>
-        <i class="fa-solid fa-music"></i>
+        <div class="container mt-2">
+          <div class="flex column center">
+            <p class="text-title">Now Playing</p>
+            <p class="text-subtitle"> Cotis - Reckless </p>
+            <i class="fa-solid fa-music"></i>
+          </div>
+        </div>
       </div>
 
     </main>
