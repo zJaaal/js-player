@@ -44,6 +44,9 @@ ul {
     line-height: 1.75;
     letter-spacing: 0.00938em;
 }
+.text-body {
+    font-size: 1.25rem;
+}
 .text {
     font-weight: 400;
     font-size: 1rem;
@@ -101,12 +104,17 @@ ul {
 
 /* Album Art */
 .album-art {
-    width: 130px;
+    width: 25%;
+    min-width: 200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px;
 }
 
 /* Album Art Image */
 .album-art-image {
-    height: 130px;
+    width: 80%;
+    height: auto;
 }
 
 /* Album Art Icon */
@@ -114,5 +122,5 @@ ul {
     font-size: 10px;
     margin-right: 5px;
     margin-top: 3px;
-    color: var(--primary);
+    color: white
 }
