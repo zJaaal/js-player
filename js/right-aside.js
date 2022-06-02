@@ -8,7 +8,7 @@ export function drawRightAside( rightAsideArtist,rightAsideArtistList, firstRend
         const isMillion = fans > 1000 ? true : false;
         
         return `
-            <li class="mb-3" data-artistId="${key}">
+            <li class="mb-3" data-artistId="${rightAsideArtist[key].name}">
               <div class="flex grow center">
                 <div class="list-item-image">
                     <img src="${rightAsideArtist[key].picture_medium}" alt="Profile ${rightAsideArtist[key].name}" height="100%" />
