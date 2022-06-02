@@ -1,5 +1,6 @@
 import * as Utils from "./axios";
-import { basicArtist } from "./main";
+
+export const basicArtist = [ 11289472, 10583405, 5357579, 8706544, 2110321, 542, 160, 70, 4103408 ];
 
 export function getArtists(basic, related){
     // Preload data
