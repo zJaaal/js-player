@@ -48,7 +48,8 @@ function drawRightAside(){
 
     ul.innerHTML = Object.keys(rightAsideArtist).slice(0, 15).map(key => {
         const fans = Math.trunc(artist[key].nb_fan / 1000);
-        const isMillion = fans > 1000;
+        const isMillion = fans > 1000 ? true : false;
+        
         return `
             <li class="mb-3" data-artistId="${key}">
               <div class="flex grow center">
@@ -57,7 +58,7 @@ function drawRightAside(){
                 </div>
                 <div class="flex grow column ml mb">
                     <p class="text text-primary">${key}</p>
-                    <p class="text-caption text-primary">${isMillion ? Math.trunc(fans) : fans}${isMillion ? "M" : "K"} followers</p>
+                    <p class="text-caption text-primary">${isMillion ? Math.trunc(fans / 1000) : fans}${isMillion ? "M" : "K"} followers</p>
                 </div>
                 <div class="flex center">
                     <span class="pointer text text-primary">
@@ -71,7 +72,15 @@ function drawRightAside(){
 
     function listener(evt){
         const artist = evt.path.find(path => path.tagName === "LI")
-        if(!artist) return // Clicked in margin;
+
+        if(!artist) return;
+
+        // Clicked in delete icon
+        if(evt.path.find(path => path.tagName === "I")){
+            delete rightAsideArtist[artist.dataset.artistid];
+            ul.removeEventListener('click', listener);
+            return drawRightAside();
+        }
 
         console.log('You clicked in ', artist.dataset.artistid)
     };
