@@ -21,6 +21,10 @@
     max-width: 992px;
     margin: auto;
 }
+.v-container {
+    height: 100%;
+    overflow: hidden;
+}
 /* margins */
 .ml {
     margin-left: var(--margin-size);
