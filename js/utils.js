@@ -44,3 +44,15 @@ export async function getBasicData(){
 
     return [ artist, data[2] ]
 }
+
+export const getTruncFans = (fans) =>{
+    let truncFans = fans >= 1000 ? Math.trunc(fans / 1000) : null;
+
+    if(!truncFans){
+        return fans;
+    }else if(truncFans >= 1000){
+        return Math.trunc(truncFans / 1000) + "M";
+    }else if(truncFans < 1000){
+        return truncFans + "K";
+    }
+}
