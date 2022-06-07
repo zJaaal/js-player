@@ -159,6 +159,18 @@ ul {
     color: white
 }
 
+/* Album display */
+#tracklist{
+    overflow-y: scroll;
+}
+#tracklist::-webkit-scrollbar{
+    width: 8px;
+    -webkit-appearance: none;
+}
+#tracklist::-webkit-scrollbar-thumb{
+    background-color: #20201D;
+    border-radius: 24px;
+}
 
 /* Initial Value */
 #right-aside, #left-aside {
