@@ -1,0 +1,17 @@
+import { drawRightAside } from "./right-aside"
+import { drawContent } from "./content";
+import * as Utils from "./utils"
+
+(async function init(){
+    try {
+        const [ artists, albums ] = await Utils.getBasicData();
+
+        // Draw
+        drawRightAside(artists, Object.keys(artists).sort(() => Math.random() - 0.6));
+        drawContent(albums, artists);
+
+    } catch (error) {
+        console.log(error);
+        alert("Ocurrio un error cargando los artistas principales")
+    }
+})();
