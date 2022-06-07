@@ -1,11 +1,11 @@
 import axios from "axios";
-import * as secrets from "../secrets.json";
+import secrets from "../secrets.json";
 
 const instance = axios.create({
     baseURL: 'https://deezerdevs-deezer.p.rapidapi.com/',
     headers: {
-        'X-RapidAPI-Host': secrets.secrets.XRapidAPIHost,
-        'X-RapidAPI-Key': secrets.secrets.XRapidAPIKey
+        'X-RapidAPI-Host': secrets.XRapidAPIHost,
+        'X-RapidAPI-Key': secrets.XRapidAPIKey
     }
 });
 
