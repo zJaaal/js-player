@@ -83,3 +83,11 @@
 .mr-4 {
     margin-right: calc(var(--margin-size) * 4);
 }
+
+/* Display */
+.d-none{
+    display: none !important;
+}
+.d-block{
+    display: block !important;
+}

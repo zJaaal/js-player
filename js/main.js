@@ -14,4 +14,15 @@ import * as Utils from "./utils"
         console.log(error);
         alert("Error fetching initial artists")
     }
+
+    //This button is working but the event listeners of content are destroyed.
+    const btnHome = document.querySelector("#home-button");
+    btnHome.addEventListener("click", ()=>{
+        const content = document.querySelector("#content");
+        const album = document.querySelector("#album");
+        if(content.classList.contains("d-none")){
+            content.classList.remove("d-none");
+            content.parentNode.removeChild(album);
+        }
+    });
 })();

@@ -1,4 +1,4 @@
-import { basicArtist, getAlbumInfo } from "./utils";
+import { basicArtist } from "./utils";
 import { drawAlbumPage } from "./album";
 
 export const drawContent = (albums, artists) =>{
@@ -16,7 +16,7 @@ export const drawContent = (albums, artists) =>{
   content.innerHTML = myAlbums.map((album) => {
       return `
       <div class="flex column album-art" style="width: 150px;">
-      <img class="album-art-image" src="${album.cover_medium}" alt="${album.title}" data-albumid="${album.id}">
+      <img class="album-art-image pointer" src="${album.cover_medium}" alt="${album.title}" data-albumid="${album.id}">
       <div class="flex middle">
         <span class="album-icon">
           <i class="fa-solid fa-user text-select"></i>
@@ -37,9 +37,8 @@ export const drawContent = (albums, artists) =>{
     if(!album){
       return;
     }
-    content.removeEventListener("click", listener);
-    content.setAttribute("style","display: none;");
-    drawAlbumPage(album.dataset.albumid)
+    content.classList.add("d-none");
+    drawAlbumPage(album.dataset.albumid);
   };
   content.addEventListener("click", listener);
 }
