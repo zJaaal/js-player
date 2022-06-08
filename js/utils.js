@@ -56,3 +56,22 @@ export const getTruncFans = (fans) =>{
         return truncFans + "K";
     }
 }
+
+export const getDuration = (sec) =>{
+    return ((sec/60).toFixed(2) + "").replace(".",":");
+}
+
+export const getFormatDate = (date) =>{
+    const months = ["Jan ", "Feb ", "Mar ","Apr ","May ","Jun ","Jul ","Aug ","Sep ","Oct ","Nov ","Dec "];
+    let newDate = date.split("-");
+    return months[newDate[1]-1] + newDate[2] + ", " + newDate[0];
+}
+
+export const getAlbumInfo = (id) =>{
+    const cache = JSON.parse(localStorage.getItem(id))
+    if(cache){
+        return Promise.all([cache,Promise.resolve(true)]);
+    }
+
+    return Promise.all([Utils.getAlbumByAlbumId(id), Promise.resolve(false)]);
+}

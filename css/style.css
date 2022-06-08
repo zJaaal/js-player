@@ -168,7 +168,7 @@ ul {
     -webkit-appearance: none;
 }
 #tracklist::-webkit-scrollbar-thumb{
-    background-color: var(--font);
+    background-color: #20201D;
     border-radius: 24px;
 }
 .track{

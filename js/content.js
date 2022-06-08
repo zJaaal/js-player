@@ -1,4 +1,5 @@
-import { basicArtist } from "./utils";
+import { basicArtist, getAlbumInfo } from "./utils";
+import { drawAlbumPage } from "./album";
 
 export const drawContent = (albums, artists) =>{
   const content = document.querySelector("#content");
@@ -14,8 +15,8 @@ export const drawContent = (albums, artists) =>{
 
   content.innerHTML = myAlbums.map((album) => {
       return `
-      <div class="flex column album-art" data-albumtitle="${album.title}" style="width: 150px;">
-      <img class="album-art-image" src="${album.cover_medium}" alt="${album.title}">
+      <div class="flex column album-art" style="width: 150px;">
+      <img class="album-art-image" src="${album.cover_medium}" alt="${album.title}" data-albumid="${album.id}">
       <div class="flex middle">
         <span class="album-icon">
           <i class="fa-solid fa-user text-select"></i>
@@ -31,12 +32,14 @@ export const drawContent = (albums, artists) =>{
     </div>`
   }).join("");
 
-  function listener(evt){
+  async function listener(evt){
     const album = evt.path.find(path => path.tagName === "IMG");
     if(!album){
       return;
     }
-    console.log('You clicked in ', album.dataset.albumtitle);
+    content.removeEventListener("click", listener);
+    content.setAttribute("style","display: none;");
+    drawAlbumPage(album.dataset.albumid)
   };
   content.addEventListener("click", listener);
 }
