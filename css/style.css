@@ -143,14 +143,16 @@ ul {
 /* Album Art */
 .album-art {
     padding: 15px;
+    padding-top: 0px;
+    padding-bottom: 30px;
     height: 50%;
     min-width: 215px;
 }
 .album-art-image {
     width: auto;
     height: auto;
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 180px;
+    max-height: 180px;
 }
 .album-icon {
     font-size: 10px;
@@ -159,6 +161,63 @@ ul {
     color: white
 }
 
+.album-big-image {
+    width: auto;
+    height: auto;
+    max-width: 225px;
+    max-height: 225px;
+}
+
+/* Album Display*/
+#tracklist{
+    overflow-y: scroll;
+}
+#tracklist::-webkit-scrollbar{
+    width: 8px;
+    -webkit-appearance: none;
+}
+#tracklist::-webkit-scrollbar-thumb{
+    background-color: #20201D;
+    border-radius: 24px;
+}
+.track{
+    transition: background-color ease-in 0.3s, font-weight ease-in-out 0.3s;
+}
+.track:hover{
+    background-color: #20201D;
+    font-weight: 900;
+}
+
+.icon {
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* House Icon */
+.house-icon {
+    font-size: 15px;
+    margin-top: 2px;
+}
+
+#home-button:hover {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+/* Menu */
+.menu-icon {
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+#menu li:hover p {
+    font-weight: 900;
+}
+
+#menu li:hover .menu-icon {
+    color: var(--primary);
+}
 
 /* Initial Value */
 #right-aside, #left-aside {
