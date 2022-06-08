@@ -12,6 +12,6 @@ import * as Utils from "./utils"
 
     } catch (error) {
         console.log(error);
-        alert("Ocurrio un error cargando los artistas principales")
+        alert("Error fetching initial artists")
     }
 })();

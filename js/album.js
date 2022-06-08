@@ -11,7 +11,7 @@ export const drawAlbumPage = async (id) =>{
         console.log(error);    
     }
     const content = document.querySelector("#content-container");
-    content.innerHTML = `<div class="h-100 w-100 flex" id="album">
+    content.innerHTML += `<div class="h-100 w-100 flex" id="album">
                             <section class="flex column" style="width: 150px;">
                                 <img class="album-art-image" src="${albumInfo.data.cover_medium}" alt="">
                                 <div class="flex middle">
@@ -38,7 +38,7 @@ export const drawAlbumPage = async (id) =>{
     const tracklist = document.querySelector("#tracklist");
     albumInfo.data.tracks.data.forEach((track)=>{
         tracklist.innerHTML += `<li class="flex column mb-2 track pointer" data-trackid="${track.id}">
-                                    <div class="flex middle ml-2">
+                                    <div class="flex ml-2">
                                         <div class="flex column grow">
                                             <p class="text-body text-primary">${track.title}</p>
                                             <p class="text-caption text-primary">${track.artist.name}</p>
