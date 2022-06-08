@@ -24,22 +24,64 @@
           <div class="flex grow min-height-50">
             .
           </div>
-          <ul class="h-100">
-            <li class="text text-primary">Item a</li>
-            <li class="text text-primary">Item b</li>
-            <li class="text text-primary">Item b</li>
-            <li class="text text-primary">Item b</li>
-            <li class="text text-primary">Item b</li>
-            <li class="text text-primary">Item a</li>
-            <li class="text text-primary">Item b</li>
-            <li class="text text-primary">Item b</li>
-            <li class="text text-primary">Item b</li>
-            <li class="text text-primary">Item b</li>
-            <li class="text text-primary">Item a</li>
-            <li class="text text-primary">Item b</li>
-            <li class="text text-primary">Item b</li>
-            <li class="text text-primary">Item b</li>
-            <li class="text text-primary">Item b</li>
+          <!-- Menu -->
+          <ul class="h-100 flex column ml-4" id="menu">
+            <li class="mb-3">
+              <div class="flex grow middle pointer" id="home">
+                <span class="house-icon icon">
+                  <i class="fa-solid fa-house"></i>
+                </span>
+                <p class="text-primary text-button">Home</p>
+              </div>
+            </li>
+            <li class="mb-3">
+              <div class="flex grow middle pointer">
+                <span class="menu-icon icon">
+                  <i class="fa-solid fa-chart-line"></i>
+                </span>
+                <p class="text-primary text-button">Top Tracks</p>
+              </div>
+            </li>
+            <li class="mb-3">
+              <div class="flex grow middle pointer">
+                <span class="menu-icon icon">
+                  <i class="fa-solid fa-user"></i>
+                </span>
+                <p class="text-primary text-button">Top Artists</p>
+              </div>
+            </li>
+            <li class="mb-3">
+              <div class="flex grow middle pointer">
+                <span class="menu-icon icon">
+                  <i class="fa-solid fa-compact-disc"></i>
+                </span>
+                <p class="text-primary text-button">Top Albums</p>
+              </div>
+            </li>
+            <li class="mb-3">
+              <div class="flex grow middle pointer">
+                <span class="menu-icon icon">
+                  <i class="fa-solid fa-user-clock"></i>
+                </span>
+                <p class="text-primary text-button">New Artists</p>
+              </div>
+            </li>
+            <li class="mb-3">
+              <div class="flex grow middle pointer">
+                <span class="menu-icon icon">
+                  <i class="fa-solid fa-shuffle"></i>
+                </span>
+                <p class="text-primary text-button">Surprise Me!</p>
+              </div>
+            </li>
+            <li class="mb-3">
+              <div class="flex grow middle pointer">
+                <span class="menu-icon icon">
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                </span>
+                <p class="text-primary text-button">History</p>
+              </div>
+            </li>
           </ul>
         </div>
 
@@ -62,6 +104,8 @@
           <!-- Center Content -->
           <div class="v-container container" id="content-container">
             <div class="h-100 flex wrap center" id="content">
+            </div>
+            <div class="h-100 flex wrap center" id="album-content">
             </div>
           </div>
         </div>
@@ -87,6 +131,6 @@
       </div>
 
     </main>
-    <script type="module" src="./js/main.js"></script>
   </body>
+  <script type="module" src="./js/main.js"></script>
 </html>

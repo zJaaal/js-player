@@ -69,9 +69,14 @@ export const getFormatDate = (date) =>{
 
 export const getAlbumInfo = (id) =>{
     const cache = JSON.parse(localStorage.getItem(id))
-    if(cache){
-        return Promise.all([cache,Promise.resolve(true)]);
-    }
+    if(cache) return Promise.resolve(cache);
 
-    return Promise.all([Utils.getAlbumByAlbumId(id), Promise.resolve(false)]);
+    return new Promise(function(resolve, reject){
+        Utils.getAlbumByAlbumId(id)
+        .then(data => {
+            localStorage.setItem(id, JSON.stringify(data))
+            resolve(data)
+        })
+        .catch(reject)
+    });
 }
