@@ -12,8 +12,8 @@ export const drawAlbumPage = async (id) =>{
     }
     const content = document.querySelector("#content-container");
     content.innerHTML += `<div class="h-100 w-100 flex" id="album">
-                            <section class="flex column" style="width: 150px;">
-                                <img class="album-art-image" src="${albumInfo.data.cover_medium}" alt="">
+                            <section class="flex column" style="width: 225px;">
+                                <img class="album-image" src="${albumInfo.data.cover_medium}" alt="">
                                 <div class="flex middle">
                                     <span class="album-icon">
                                         <i class="fa-solid fa-user text-select"></i>

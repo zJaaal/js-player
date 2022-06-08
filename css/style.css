@@ -160,6 +160,12 @@ ul {
 }
 
 /* Album Display*/
+.album-art{
+    width: auto;
+    height: auto;
+    max-width: 225px;
+    max-height: 225px;
+}
 #tracklist{
     overflow-y: scroll;
 }
@@ -179,7 +185,7 @@ ul {
     font-weight: 900;
 }
 .icon{
-    color: var(--primary);
+    color: white;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -189,16 +195,24 @@ ul {
     margin-top: 2px;
 }
 #home-button:hover{
+    color: var(--primary);
     font-weight: 500;
 }
-/* Menu */
-.menu-icon{
-    font-size: 20px;
-    margin-bottom: 2px;
+#home-button:hover .house-icon{
+    color: var(--primary);
 }
 
-#menu li:hover{
-    font-weight: 700;
+/* Menu */
+.menu-icon{
+    font-size: 15px;
+    margin-bottom: 2px;
+    transition: font-weight ease-in-out 0.3s;
+}
+#menu li:hover p{
+    font-weight: 900;
+}
+#menu li:hover .menu-icon{
+    color: var(--primary);
 }
 
 /* Initial Value */
