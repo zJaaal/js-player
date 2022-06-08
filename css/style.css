@@ -178,6 +178,28 @@ ul {
     background-color: #20201D;
     font-weight: 900;
 }
+.icon{
+    color: var(--primary);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/* House Icon */
+.house-icon{
+    font-size: 15px;
+    margin-top: 2px;
+}
+#home-button:hover{
+    font-weight: 500;
+}
+/* Menu */
+.menu-icon{
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+#menu li:hover{
+    font-weight: 700;
+}
 
 /* Initial Value */
 #right-aside, #left-aside {
