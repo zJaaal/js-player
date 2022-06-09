@@ -2,14 +2,14 @@ import { getAlbumInfo, getDuration, getFormatDate } from "./utils";
 
 export const drawAlbumPage = async (id) =>{
     try{
-        const { data } = await getAlbumInfo(id)
         const content = document.querySelector("#album-content");
-        
         content.style.display = "flex"
+        content.innerHTML = `<div class="lds-ripple"><div></div><div></div></div>`;
+        const { data } = await getAlbumInfo(id)
         content.innerHTML = `
             <div class="h-100 w-100 flex" id="album">
                 <section class="flex column" style="width: 225px;">
-                    <img class="album-big-image" src="${data.cover_medium}" alt="">
+                    <img class="album-big-image" src="${data.cover_xl}" alt="">
                     <div class="flex middle">
                         <span class="album-icon">
                             <i class="fa-solid fa-user text-select"></i>
