@@ -42,6 +42,12 @@ ul {
     line-height: 1.235;
     letter-spacing: 0.00735em;
 }
+.text-big{
+    font-weight: 400;
+    font-size: 4.230rem;
+    line-height: 1.235;
+    letter-spacing: 0.00735em;
+}
 .text-subtitle {
     font-weight: 400;
     font-size: 1rem;
@@ -187,11 +193,27 @@ ul {
     background-color: #20201D;
     font-weight: 900;
 }
-
 .icon {
     color: white;
     margin-left: 5px;
     margin-right: 5px;
+}
+/* Artist Display */
+.image-container{
+    position: relative;
+    min-height: 200px;
+    overflow: hidden;
+}
+.image-container img{
+    filter: blur(3px);
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.follower-icon{
+    font-size: 1rem;
 }
 
 /* House Icon */

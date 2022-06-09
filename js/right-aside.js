@@ -1,5 +1,5 @@
 import { getTruncFans } from "./utils";
-
+import { drawArtist } from "./artist";
 export function drawRightAside(artists, list){
 
     // Event listener
@@ -19,7 +19,7 @@ export function drawRightAside(artists, list){
         }else
 
         // Do something
-        console.log(artists[artist.dataset.artistid]);
+        drawArtist(artist.dataset.artistid);
     };
 
     const ul = document.querySelector('#right-aside ul');

@@ -80,3 +80,7 @@ export const getAlbumInfo = (id) =>{
         .catch(reject)
     });
 }
+
+export const getArtistInfo = (id)=>{
+    return Promise.resolve(Utils.getArtistById(id));
+}

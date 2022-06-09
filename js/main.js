@@ -8,7 +8,7 @@ import * as Utils from "./utils"
 
         // Draw
         drawRightAside(artists, Object.keys(artists).sort(() => Math.random() - 0.6));
-        drawContent(albums, artists);
+        //drawContent(albums, artists);
     } catch (error) {
         console.log(error);
         alert("Error fetching initial artists")
