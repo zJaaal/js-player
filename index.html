@@ -107,7 +107,8 @@
             </div>
             <div class="h-100 flex wrap center" id="album-content">
             </div> -->
-            <div class="h-100 flex column grow mr" id="artist-content">
+
+            <!-- <div class="h-100 flex column grow mr" id="artist-content">
               <div class="image-container w-100">
                 <img src="/assets/album-art/cotis-album.jpg" alt="">
               </div>
@@ -122,7 +123,143 @@
                   </div>
                 </div>
               </section>
+            </div> -->
+
+            <!-- id: 7327640
+            link: "https://www.deezer.com/artist/7327640"
+            name: "Morat"
+            nb_album: 37
+            nb_fan: 833219
+            picture: "https://api.deezer.com/artist/7327640/image"
+            picture_big: "https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/500x500-000000-80-0-0.jpg"
+            picture_medium:
+            "https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/250x250-000000-80-0-0.jpg"
+            picture_small: "https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/56x56-000000-80-0-0.jpg"
+            picture_xl: "https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/1000x1000-000000-80-0-0.jpg"
+            radio: true
+            share:
+            "https://www.deezer.com/artist/7327640?utm_source=deezer&utm_content=artist-7327640&utm_term=0_1654833685&utm_medium=web"
+            tracklist: "https://api.deezer.com/artist/7327640/top?limit=50"
+            type: "artist" -->
+
+            <div class="v-container container">
+              <div class="a-header">
+                <div class="flex h-100">
+                  <div class="flex h-100 center ml-10 mr-4">
+                    <img src="https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/500x500-000000-80-0-0.jpg" />
+                  </div>
+                  <div class="flex h-100 justify column">
+                    <p>Verified Artist</p>
+                    <h6>Camila Cabello</h6>
+                    <span>45,854,546 monthly istenners</span>
+                  </div>
+                </div>
+              </div>
+              <div class="a-player">
+                <div class="card-player">
+                  <div>
+                    <img src="https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/500x500-000000-80-0-0.jpg" />
+                    <div class="flex grow justify right h-100">
+                      <p>Balas Perdidas</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-player">
+                  <div>
+                    <img src="https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/500x500-000000-80-0-0.jpg" />
+                    <div class="flex grow justify right h-100">
+                      <p>Balas Perdidas</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-player">
+                  <div>
+                    <img src="https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/500x500-000000-80-0-0.jpg" />
+                    <div class="flex grow justify right h-100">
+                      <p>Balas Perdidas</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-player">
+                  <div>
+                    <img src="https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/500x500-000000-80-0-0.jpg" />
+                    <div class="flex grow justify right h-100">
+                      <p>Balas Perdidas</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <style>
+              .card-player {
+                flex: 1;
+                max-width: 320px;
+                height: 100%;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                margin-left: 10px;
+                margin-right: 10px;
+              }
+              .card-player > div {
+                display: flex;
+                height: 100%;
+                background-color: rgba(255,255,255, .1);
+                position: relative;
+                border-radius: 8px;
+              }
+              .card-player img {
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                height: 100%;
+                padding: 12.5px;
+                padding-bottom: 40px;
+                transform: translateX(-50%);
+              }
+              .card-player p {
+                color: white;
+                font-size: 17px;
+              }
+              .a-player {
+                display: flex;
+                height: 50%;
+                width: 100%;
+                background-color: rgb(0,0,0,.4);
+                padding-left: 10px;
+                padding-right: 10px;
+              }
+              .a-header {
+                height: 50%;
+                background-color: #2A2925;
+                opacity: 1;
+                background-image:  repeating-radial-gradient(circle at center 0, transparent 0, #058C4240 45px ), repeating-linear-gradient( #2A292510, #2A2925 );
+                background-blend-mode: multiply;
+              }
+              .a-header img {
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+                display: flex;
+              }
+              .a-header h6 {
+                color: white;
+                font-size: 50px;
+                font-weight: bold;
+                text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+                margin-bottom: 0px;
+              }
+              .a-header p {
+                color: white;
+                font-size: 16px;
+              }
+              .a-header span {
+                color: white;
+                font-size: 16px;
+              }
+            </style>
+
+
           </div>
         </div>
 

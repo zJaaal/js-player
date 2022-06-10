@@ -201,12 +201,10 @@ ul {
 /* Artist Display */
 .image-container{
     position: relative;
-    min-height: 200px;
-    overflow: hidden;
 }
 .image-container img{
-    filter: blur(3px);
     position: absolute;
+    z-index: 0;
     width: 100%;
     top: 50%;
     left: 50%;
