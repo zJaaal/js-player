@@ -239,7 +239,6 @@ ul {
     transform: scale(1.05);
 }
 #related-artists{
-    margin-bottom: 30px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
     background-image: linear-gradient(#2a2925 30% ,#20201D 70% );
