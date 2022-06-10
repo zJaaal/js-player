@@ -82,5 +82,10 @@ export const getAlbumInfo = (id) =>{
 }
 
 export const getArtistInfo = (id)=>{
-    return Promise.resolve(Utils.getArtistById(id));
+    return Promise.all([Promise.resolve(Utils.getArtistById(id)),
+                       Promise.resolve(Utils.getTopSongsByArtistId(id)),
+                       Promise.resolve(Utils.getAlbumsByArtistId(id)),
+                       Promise.resolve(Utils.getRelatedArtists(id))
+                      ]);
+    
 }
