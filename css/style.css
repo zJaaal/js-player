@@ -77,6 +77,12 @@ ul {
     letter-spacing: 0.03333em;
     display: block;
 }
+.text-bold{
+    font-weight: bold;
+}
+.text-wide{
+    font-weight: 500;
+}
 /* Overflow Wrap */
 .text-wrap {
     overflow-wrap: break-word;
@@ -153,6 +159,10 @@ ul {
     padding-bottom: 30px;
     height: 50%;
     min-width: 215px;
+    transition: transform ease-in-out 0.3s;
+}
+.album-art:hover{
+    transform: scale(1.05);
 }
 .album-art-image {
     width: auto;
@@ -199,19 +209,72 @@ ul {
     margin-right: 5px;
 }
 /* Artist Display */
-.image-container{
-    position: relative;
+#artist-content{
+    overflow-y: scroll;
 }
-.image-container img{
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+#artist-content::-webkit-scrollbar{
+    width: 8px;
+    -webkit-appearance: none;
 }
-.follower-icon{
-    font-size: 1rem;
+#artist-content::-webkit-scrollbar-thumb{
+    background-color: #20201D;
+    border-radius: 24px;
+}
+.track-image{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.related-artist{
+    padding: 8px;
+    padding-top: 0px;
+    padding-bottom: 25px;
+    height: 50%;
+    min-width: 200px;
+    width: 200px;
+    text-align: center;
+    transition: transform ease-in-out 0.3s;
+}
+.related-artist:hover{
+    transform: scale(1.05);
+}
+#related-artists{
+    margin-bottom: 30px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    background-image: linear-gradient(#2a2925 30% ,#20201D 70% );
+}
+.related-artist-image{
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+    max-width: 230px;
+    max-height: 230px;
+}
+.a-header {
+    height: 50%;
+    opacity: 1;
+    /* background-image:  repeating-radial-gradient(circle at center 0, transparent 0, #058C4240 45px ), repeating-linear-gradient( #2A292510, #2A2925 );*/
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;    
+    background-image: linear-gradient(#20201D 30% ,#2a2925 70% );
+}
+.a-header img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.a-header h6 {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0px;
+}
+.a-header p {
+    font-size: 16px;
+}
+.a-header span {
+    font-size: 16px;
 }
 
 /* House Icon */

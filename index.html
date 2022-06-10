@@ -107,159 +107,197 @@
             </div>
             <div class="h-100 flex wrap center" id="album-content">
             </div> -->
-
-            <!-- <div class="h-100 flex column grow mr" id="artist-content">
-              <div class="image-container w-100">
-                <img src="/assets/album-art/cotis-album.jpg" alt="">
-              </div>
-              <section class="flex right" id="artist-header">
-                <div class="flex column ml-2">
-                  <p class="text-primary text-big">Cotis</p>
-                  <div class="flex ml-2">
-                    <span class="follower-icon mr">
-                      <i class="fa-solid fa-user text-select"></i>
-                    </span>
-                    <p class="text-primary text">20.334.233</p>
+            <div class="v-container container" id="artist-content">
+              <section class="a-header flex">
+                <div class="flex h-100">
+                  <div class="flex h-100 center ml-10 mr-4">
+                    <img src="https://e-cdns-images.dzcdn.net/images/artist/52b2011aa35cc7454a98dafb3a87e16b/500x500-000000-80-0-0.jpg" />
+                  </div>
+                  <div class="flex h-100 justify column">
+                    <p class="text-primary">Verified Artist</p>
+                    <h6 class="text-primary">Alec Benjamin</h6>
+                    <span class="text-primary"> 269,963 followers</span>
                   </div>
                 </div>
               </section>
-            </div> -->
-
-            <!-- id: 7327640
-            link: "https://www.deezer.com/artist/7327640"
-            name: "Morat"
-            nb_album: 37
-            nb_fan: 833219
-            picture: "https://api.deezer.com/artist/7327640/image"
-            picture_big: "https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/500x500-000000-80-0-0.jpg"
-            picture_medium:
-            "https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/250x250-000000-80-0-0.jpg"
-            picture_small: "https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/56x56-000000-80-0-0.jpg"
-            picture_xl: "https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/1000x1000-000000-80-0-0.jpg"
-            radio: true
-            share:
-            "https://www.deezer.com/artist/7327640?utm_source=deezer&utm_content=artist-7327640&utm_term=0_1654833685&utm_medium=web"
-            tracklist: "https://api.deezer.com/artist/7327640/top?limit=50"
-            type: "artist" -->
-
-            <div class="v-container container">
-              <div class="a-header">
-                <div class="flex h-100">
-                  <div class="flex h-100 center ml-10 mr-4">
-                    <img src="https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/500x500-000000-80-0-0.jpg" />
-                  </div>
-                  <div class="flex h-100 justify column">
-                    <p>Verified Artist</p>
-                    <h6>Camila Cabello</h6>
-                    <span>45,854,546 monthly istenners</span>
-                  </div>
+              <section class="flex column" id="top-tracks">
+                <div class="flex center">
+                  <h1 class="text-primary text-title text-bold mb-2">Top Tracks</h1>
                 </div>
-              </div>
-              <div class="a-player">
-                <div class="card-player">
-                  <div>
-                    <img src="https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/500x500-000000-80-0-0.jpg" />
-                    <div class="flex grow justify right h-100">
-                      <p>Balas Perdidas</p>
+                <ul class="flex grow column">
+                  <li class="flex pointer mb-2">
+                    <div class="flex grow middle track">
+                      <img class="track-image" src="https://e-cdns-images.dzcdn.net/images/cover/1a2ff1ad7241739d524583d6f775c379/250x250-000000-80-0-0.jpg" alt="">
+                     <div class="flex grow column ml-2">
+                        <p class="text-primary text text-wide">Let Me Down Slowly</p>
+                        <div class="flex middle">
+                            <span class="album-icon mb">
+                              <i class="fa-solid fa-compact-disc text-select"></i>
+                            </span>
+                            <p class="text-primary text-caption ">Let Me Down Slowly</p>
+                        </div>
+                     </div>
+                    <div class="flex middle">
+                      <p class="text-primary text-caption mr-2">2:49</p>
+                       <span class="album-icon mb">
+                        <i class="fa-solid fa-play text-select"></i>
+                        </span>
                     </div>
-                  </div>
+                    </div> 
+                  </li>
+                  <li class="flex grow pointer mb-2">
+                    <div class="flex grow middle track">
+                      <img class="track-image" src="https://e-cdns-images.dzcdn.net/images/cover/1b39d31eb168f517cab66be2991a1abb/250x250-000000-80-0-0.jpg" alt="">
+                     <div class="flex grow column ml-2">
+                        <p class="text-primary text text-wide">Water Fountain</p>
+                        <div class="flex middle">
+                          <span class="album-icon mb">
+                            <i class="fa-solid fa-compact-disc text-select"></i>
+                          </span>
+                          <p class="text-primary text-caption ">Narrated For You</p>
+                        </div>
+                     </div>
+                      <div class="flex middle">
+                        <p class="text-primary text-caption mr-2">3:38</p>
+                        <span class="album-icon mb">
+                          <i class="fa-solid fa-play text-select"></i>
+                        </span>
+                      </div>
+                    </div> 
+                  </li>
+                  <li class="flex pointer mb-2">
+                    <div class="flex grow middle track">
+                      <img class="track-image" src="https://e-cdns-images.dzcdn.net/images/cover/1b39d31eb168f517cab66be2991a1abb/250x250-000000-80-0-0.jpg" alt="">
+                     <div class="flex grow column ml-2">
+                        <p class="text-primary text text-wide">If We Have Each Other</p>
+                        <div class="flex middle">
+                          <span class="album-icon mb">
+                            <i class="fa-solid fa-compact-disc text-select"></i>
+                          </span>
+                          <p class="text-primary text-caption ">Narrated For You</p>
+                        </div>
+                     </div>
+                      <div class="flex middle">
+                        <p class="text-primary text-caption mr-2">3:01</p>
+                        <span class="album-icon mb">
+                          <i class="fa-solid fa-play text-select"></i>
+                        </span>
+                      </div>
+                    </div> 
+                  </li>
+                  <li class="flex pointer mb-2">
+                    <div class="flex grow middle track">
+                      <img class="track-image" src="https://e-cdns-images.dzcdn.net/images/cover/409124d99e2e9358b14afd616beb6a56/250x250-000000-80-0-0.jpg" alt="">
+                     <div class="flex grow column ml-2">
+                        <p class="text-primary text text-wide">Let Me Down Slowly (feat. Alessia Cara)</p>
+                        <div class="flex middle">
+                          <span class="album-icon mb">
+                            <i class="fa-solid fa-compact-disc text-select"></i>
+                          </span>
+                          <p class="text-primary text-caption ">Let Me Down Slowly (feat. Alessia Cara)</p>
+                        </div>
+                     </div>
+                     <div class="flex middle">
+                      <p class="text-primary text-caption mr-2">2:45</p>
+                        <span class="album-icon mb">
+                          <i class="fa-solid fa-play text-select"></i>
+                        </span>
+                      </div>
+                    </div> 
+                  </li>
+                  <li class="flex pointer mb-2">
+                    <div class="flex grow middle track">
+                      <img class="track-image" src="https://e-cdns-images.dzcdn.net/images/cover/356d947d703b9e50c371cd6d3d2c6997/250x250-000000-80-0-0.jpg" alt="">
+                     <div class="flex grow column ml-2">
+                        <p class="text-primary text text-wide">Shadow Of Mine</p>
+                        <div class="flex middle">
+                          <span class="album-icon mb">
+                            <i class="fa-solid fa-compact-disc text-select"></i>
+                          </span>
+                          <p class="text-primary text-caption ">Shadow Of Mine</p>
+                        </div>
+                     </div>
+                      <div class="flex middle">
+                        <p class="text-primary text-caption mr-2">2:49</p>
+                        <span class="album-icon mb">
+                          <i class="fa-solid fa-play text-select"></i>
+                        </span>
+                      </div>
+                    </div> 
+                  </li>
+                </ul>
+              </section>
+              <section class="flex column mt-4" id="top-albums">
+                <div class="flex center mb-4">
+                  <h1 class="text-primary text-title text-bold mb-4">Top Albums</h1>
                 </div>
-                <div class="card-player">
-                  <div>
-                    <img src="https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/500x500-000000-80-0-0.jpg" />
-                    <div class="flex grow justify right h-100">
-                      <p>Balas Perdidas</p>
+                <ul class="flex wrap center" id="albums-list">
+                  <li class="flex column album-art pointer test" style="width: 150px;">
+                    <img class="album-art-image" src="https://e-cdns-images.dzcdn.net/images/cover/356d947d703b9e50c371cd6d3d2c6997/250x250-000000-80-0-0.jpg" alt="">
+                    <div class="flex center">
+                      <p class="text text-wide text-primary">(Un)Commentary</p>
                     </div>
-                  </div>
-                </div>
-                <div class="card-player">
-                  <div>
-                    <img src="https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/500x500-000000-80-0-0.jpg" />
-                    <div class="flex grow justify right h-100">
-                      <p>Balas Perdidas</p>
+                  </li>
+                  <li class="flex column album-art pointer" style="width: 150px;">
+                    <img class="album-art-image" src="https://e-cdns-images.dzcdn.net/images/cover/6bda3e59843e190a76274515ecb2458f/250x250-000000-80-0-0.jpg" alt="">
+                    <div class="flex center">
+                      <p class="text text-wide text-primary">These Two Windows</p>
                     </div>
-                  </div>
-                </div>
-                <div class="card-player">
-                  <div>
-                    <img src="https://e-cdns-images.dzcdn.net/images/artist/76b19db9e6d06f95b25abb2da521b3b8/500x500-000000-80-0-0.jpg" />
-                    <div class="flex grow justify right h-100">
-                      <p>Balas Perdidas</p>
+                  </li>
+                  <li class="flex column album-art pointer" style="width: 150px;">
+                    <img class="album-art-image" src="https://e-cdns-images.dzcdn.net/images/cover/1b39d31eb168f517cab66be2991a1abb/250x250-000000-80-0-0.jpg" alt="">
+                    <div class="flex center">
+                      <p class="text text-wide text-primary">Narrated For You</p>
                     </div>
+                  </li>
+                  <li class="flex column album-art pointer" style="width: 150px;">
+                    <img class="album-art-image" src="https://e-cdns-images.dzcdn.net/images/cover/6b2e24a11e1662a44bf78d993c75fda5/250x250-000000-80-0-0.jpg" alt="">
+                    <div class="flex center">
+                      <p class="text text-wide text-primary">成长 (Older)</p>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+              <section class="flex column mt-4" id="related-artists">
+                <div class="flex center">
+                  <h1 class="text-primary text-title text-bold mb-4">Related Artists</h1>
+                </div>
+                <div class="flex wrap center" id="artists-slider">
+                  <div class="flex column center related-artist">
+                    <img class="related-artist-image pointer" src="https://api.deezer.com/artist/50633812/image" alt="">
+                    <p class="text-primary text-body">Conan Gray</p>
+                  </div>
+                  <div class="flex column center related-artist">
+                    <img class="related-artist-image pointer" src="https://api.deezer.com/artist/13817211/image" alt="">
+                    <p class="text-primary text-body">Tate McRae</p>
+                  </div>
+                  <div class="flex column center related-artist">
+                    <img class="related-artist-image pointer" src="https://api.deezer.com/artist/4103408/image" alt="">
+                    <p class="text-primary text-body">5 Seconds Of Summer</p>
+                  </div>
+                  <div class="flex column center related-artist">
+                    <img class="related-artist-image pointer" src="https://api.deezer.com/artist/1948791/image" alt="">
+                    <p class="text-primary text-body">Blackbear</p>
+                  </div>
+                  <div class="flex column center related-artist">
+                    <img class="related-artist-image pointer" src="https://api.deezer.com/artist/5292512/image" alt="">
+                    <p class="text-primary text-body">Halsey</p>
+                  </div>
+                  <div class="flex column center related-artist">
+                    <img class="related-artist-image pointer" src="https://api.deezer.com/artist/5868765/image" alt="">
+                    <p class="text-primary text-body">Chase Atlantic</p>
+                  </div>
+                  <div class="flex column center related-artist">
+                    <img class="related-artist-image pointer" src="https://api.deezer.com/artist/2110321/image" alt="">
+                    <p class="text-primary text-body">Julia Michaels</p>
+                  </div>
+                  <div class="flex column center related-artist">
+                    <img class="related-artist-image pointer" src="https://api.deezer.com/artist/10797684/image" alt="">
+                    <p class="text-primary text-body">Finneas</p>
                   </div>
                 </div>
-              </div>
+              </section>
             </div>
-
-            <style>
-              .card-player {
-                flex: 1;
-                max-width: 320px;
-                height: 100%;
-                padding-top: 15px;
-                padding-bottom: 15px;
-                margin-left: 10px;
-                margin-right: 10px;
-              }
-              .card-player > div {
-                display: flex;
-                height: 100%;
-                background-color: rgba(255,255,255, .1);
-                position: relative;
-                border-radius: 8px;
-              }
-              .card-player img {
-                position: absolute;
-                top: 0px;
-                left: 50%;
-                height: 100%;
-                padding: 12.5px;
-                padding-bottom: 40px;
-                transform: translateX(-50%);
-              }
-              .card-player p {
-                color: white;
-                font-size: 17px;
-              }
-              .a-player {
-                display: flex;
-                height: 50%;
-                width: 100%;
-                background-color: rgb(0,0,0,.4);
-                padding-left: 10px;
-                padding-right: 10px;
-              }
-              .a-header {
-                height: 50%;
-                background-color: #2A2925;
-                opacity: 1;
-                background-image:  repeating-radial-gradient(circle at center 0, transparent 0, #058C4240 45px ), repeating-linear-gradient( #2A292510, #2A2925 );
-                background-blend-mode: multiply;
-              }
-              .a-header img {
-                border-radius: 50%;
-                width: 200px;
-                height: 200px;
-                display: flex;
-              }
-              .a-header h6 {
-                color: white;
-                font-size: 50px;
-                font-weight: bold;
-                text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-                margin-bottom: 0px;
-              }
-              .a-header p {
-                color: white;
-                font-size: 16px;
-              }
-              .a-header span {
-                color: white;
-                font-size: 16px;
-              }
-            </style>
-
-
           </div>
         </div>
 
