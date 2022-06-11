@@ -58,7 +58,11 @@ export const getTruncFans = (fans) =>{
 }
 
 export const getDuration = (sec) =>{
-    return ((sec/60).toFixed(2) + "").replace(".",":");
+    let time = (sec/60).toString().split(".");
+    let getSeconds = () =>  Math.trunc(Number("0." + time[1]) * 60);
+    let seconds = getSeconds().toString().length == 1 ? "0" + getSeconds() : getSeconds();
+    let duration = time[0] +":"+seconds;
+    return duration;
 }
 
 export const getFormatDate = (date) =>{
