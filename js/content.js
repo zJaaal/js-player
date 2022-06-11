@@ -39,12 +39,14 @@ export const drawContent = (albums, artists) =>{
     if(!album) return;
 
     content.style.display = "none";
+    document.querySelector("#artist-content").style.display ="none";
     drawAlbumPage(album.dataset.albumid)
   };
 
   function onClickHome(){
     content.style.display = "flex"
     document.querySelector("#album-content").style.display = "none"
+    document.querySelector("#artist-content").style.display ="none";
   }
 
   content.addEventListener("click", onClickAlbum);

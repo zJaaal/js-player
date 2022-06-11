@@ -68,13 +68,13 @@ export const getFormatDate = (date) =>{
 }
 
 export const getAlbumInfo = (id) =>{
-    const cache = JSON.parse(localStorage.getItem(id))
+    const cache = JSON.parse(localStorage.getItem(id+"-album"))
     if(cache) return Promise.resolve(cache);
 
     return new Promise(function(resolve, reject){
         Utils.getAlbumByAlbumId(id)
         .then(data => {
-            localStorage.setItem(id, JSON.stringify(data))
+            localStorage.setItem(id+"-album", JSON.stringify(data))
             resolve(data)
         })
         .catch(reject)
@@ -82,10 +82,18 @@ export const getAlbumInfo = (id) =>{
 }
 
 export const getArtistInfo = (id)=>{
+    const cache = JSON.parse(localStorage.getItem(id+"-artist"));
+    if(cache) return Promise.resolve(cache);
+
     return Promise.all([Promise.resolve(Utils.getArtistById(id)),
-                       Promise.resolve(Utils.getTopSongsByArtistId(id)),
-                       Promise.resolve(Utils.getAlbumsByArtistId(id)),
-                       Promise.resolve(Utils.getRelatedArtists(id))
-                      ]);
-    
+                            Promise.resolve(Utils.getTopSongsByArtistId(id)),
+                            Promise.resolve(Utils.getAlbumsByArtistId(id)),
+                            Promise.resolve(Utils.getRelatedArtists(id))
+                        ]).then(data => {  
+                            localStorage.setItem(id+"-artist",JSON.stringify(data))
+                            return data;
+                        }).catch(error =>{
+                            alert("An error occured while fetching Artist Info");
+                            console.log(error);
+                        });
 }

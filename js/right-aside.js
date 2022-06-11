@@ -6,7 +6,6 @@ export function drawRightAside(artists, list){
     function listener(evt){
         const artist = evt.path.find(path => path.tagName === "LI");
         const delIcon = evt.path.find(path => path.tagName === "I");
-
         if(!artist) return;
 
         // Clicked in ? icon
@@ -18,7 +17,6 @@ export function drawRightAside(artists, list){
             drawRightAside(artists, list.filter((a) => a != artist.dataset.artistid));
         }else
 
-        // Do something
         drawArtist(artist.dataset.artistid);
     };
 
@@ -44,7 +42,7 @@ export function drawRightAside(artists, list){
         // Ul drawing
         ul.innerHTML = list.slice(0, 7).map(key => {
             return `
-                <li class="mb-3" data-artistId="${key}">
+                <li class="mb-3 pointer" data-artistId="${key}">
                 <div class="flex grow center">
                     <div class="list-item-image">
                         <img src="${artists[key].picture_medium}" alt="Profile ${artists[key].name}" height="100%" />

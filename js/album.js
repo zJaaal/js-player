@@ -1,10 +1,12 @@
 import { getAlbumInfo, getDuration, getFormatDate } from "./utils";
-
+import { drawArtist } from "./artist";
 export const drawAlbumPage = async (id) =>{
     try{
-        const { data } = await getAlbumInfo(id)
         const content = document.querySelector("#album-content");
-        
+        //You should add a loader here
+        content.innerHTML =""; 
+
+        const { data } = await getAlbumInfo(id)
         content.style.display = "flex"
         content.innerHTML = `
             <div class="h-100 w-100 flex" id="album">
@@ -14,7 +16,7 @@ export const drawAlbumPage = async (id) =>{
                         <span class="album-icon">
                             <i class="fa-solid fa-user text-select"></i>
                         </span>
-                        <p class="text text-primary">${data.contributors[0].name}</p>
+                        <p class="text text-primary pointer" data-artistid="${data.contributors[0].id}">${data.contributors[0].name}</p>
                     </div>
                     <div class="flex">
                         <span class="album-icon">
@@ -60,7 +62,7 @@ const drawTrackList = (tracks) => {
     ).join('');
     
 
-    function listener (evt){
+    function trackListener (evt){
         const track =  evt.path.find(path => path.tagName === "LI");
         const playIcon = evt.path.find(path => path.tagName ==="I");
 
@@ -69,6 +71,15 @@ const drawTrackList = (tracks) => {
 
         console.log("You selected: " + track.dataset.trackid);
     }
-    tracklist.removeEventListener("click", listener);
-    tracklist.addEventListener("click", listener);
+    function albumListener (evt){
+        const artist = evt.path.find(path => path.tagName ==="P");
+        if(!artist.dataset.artistid){return;} 
+        else{
+            drawArtist(artist.dataset.artistid);
+        }
+    }
+    document.querySelector("#album").removeEventListener("click",albumListener);
+    document.querySelector("#album").addEventListener("click",albumListener);
+    tracklist.removeEventListener("click", trackListener);
+    tracklist.addEventListener("click", trackListener);
 }
