@@ -14,7 +14,7 @@ export const drawArtist = async (id)=>{
     artistContent.style.display = "block";
 
     //Here you must add a loader here
-    artistContent.innerHTML ="";
+    artistContent.innerHTML =`<div class="flex center"><div class="lds-ripple"><div></div><div></div></div></div>`;
 
     const [artistInfo, topSongs, artistAlbums, relatedArtists] = await getArtistInfo(id);
 
@@ -89,7 +89,7 @@ export const drawArtist = async (id)=>{
   const albumsList = document.querySelector("#albums-list");
   artistAlbums.data.data.sort((a,b) => b.fans - a.fans).slice(0,4).forEach(album =>{
     albumsList.innerHTML += `
-    <li class="flex column album-art pointer test" style="width: 170px;" data-albumid="${album.id}">
+    <li class="flex column album-art pointer" style="width: 170px;" data-albumid="${album.id}">
         <img class="album-art-image" src="${album.cover_medium}" alt="${album.title + " cover art"}">
         <div class="flex center">
             <p class="text text-wide text-primary">${album.title}</p>
