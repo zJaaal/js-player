@@ -97,3 +97,23 @@ export const getArtistInfo = (id)=>{
                             console.log(error);
                         });
 }
+
+export const getSearchResult = (str) =>{
+    if(!str) return;
+    
+    return new Promise((res, err)=>{
+        Utils.getResult(str).then(data => {
+            res(data);
+        }).catch(err)
+    });
+}
+
+export function debounce(callback, wait) {
+    let timerId;
+    return (...args) => {
+      clearTimeout(timerId);
+      timerId = setTimeout(() => {
+        callback(...args);
+      }, wait);
+    };
+  }

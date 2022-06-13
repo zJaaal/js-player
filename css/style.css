@@ -276,6 +276,28 @@ ul {
     font-size: 16px;
 }
 
+/* Search Display */
+#search-content{
+    overflow-y: scroll;
+}
+#search-content::-webkit-scrollbar{
+    width: 8px;
+    -webkit-appearance: none;
+}
+#search-content::-webkit-scrollbar-thumb{
+    background-color: #20201D;
+    border-radius: 24px;
+}
+#tracks-section {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;   
+    background-image: linear-gradient(#20201D 30% ,#2a2925 70% );
+}
+#artists-section {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;   
+    background-image: linear-gradient(#2a2925 30% ,#20201D 70% );
+}
 /* House Icon */
 .house-icon {
     font-size: 15px;

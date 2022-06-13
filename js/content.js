@@ -45,8 +45,9 @@ export const drawContent = (albums, artists) =>{
 
   function onClickHome(){
     content.style.display = "flex"
-    document.querySelector("#album-content").style.display = "none"
+    document.querySelector("#album-content").style.display = "none";
     document.querySelector("#artist-content").style.display ="none";
+    document.querySelector("#search-content").style.display = "none";
   }
 
   content.addEventListener("click", onClickAlbum);
