@@ -263,6 +263,10 @@ ul {
     width: 150px;
     height: 150px;
 }
+.header-image{
+    margin-left:calc(var(--margin-size)*10);
+    margin-right:calc(var(--margin-size)*4);
+}
 .a-header h6 {
     font-size: 50px;
     font-weight: bold;
@@ -329,7 +333,45 @@ ul {
 }
 
 /* // X-Small devices (portrait phones, less than 576px) */
-@media (min-width: 576px) {
+@media (max-width: 576px) {
+    /* artist responsive display */
+    .a-header p {
+        display: none;
+    }
+    .a-header span {
+        display: none;
+    }
+    .a-header h6{
+        font-size: 30px;
+
+    }
+    .a-header div{
+        justify-content: center;
+        align-items: center;
+    }
+    .a-header>div{
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .a-header img{
+        margin-top: 5px;
+        width: 130px;
+        height: 130px;
+    }
+    .header-image{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .a-header{
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    /* Making the titles more little */
+    .text-title{
+        font-size: 1.6rem;
+    }
 }
 
 /* // Medium devices (tablets, 768px and up) */

@@ -1,7 +1,7 @@
 export default (artist) => ` 
     <section class="a-header flex">
         <div class="flex h-100">
-            <div class="flex h-100 center ml-10 mr-4">
+            <div class="flex h-100 center header-image">
                 <img src="${artist.picture_medium}" />
             </div>
             <div class="flex h-100 justify column">
