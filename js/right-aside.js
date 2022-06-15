@@ -1,5 +1,6 @@
 import { getTruncFans } from "./utils";
 import { drawArtist } from "./artist";
+import rightAsideTemplate from "./templates/right-aside-template";
 export function drawRightAside(artists, list){
 
     // Event listener
@@ -40,26 +41,7 @@ export function drawRightAside(artists, list){
     `
     }else{
         // Ul drawing
-        ul.innerHTML = list.slice(0, 7).map(key => {
-            return `
-                <li class="mb-3 pointer" data-artistId="${key}">
-                <div class="flex grow center">
-                    <div class="list-item-image">
-                        <img src="${artists[key].picture_medium}" alt="Profile ${artists[key].name}" height="100%" />
-                    </div>
-                    <div class="flex grow column ml mb">
-                        <p class="text text-primary">${artists[key].name}</p>
-                        <p class="text-caption text-primary">${getTruncFans(artists[key].nb_fan)} followers</p>
-                    </div>
-                    <div class="flex center">
-                        <span class="pointer text text-primary">
-                        <i class="fa-solid fa-xmark"></i>
-                        </span>
-                    </div>
-                </div>
-                </li>
-            `
-        }).join('');
+        ul.innerHTML = list.slice(0, 7).reduce((acc, key)=> acc + rightAsideTemplate(key, artists),"");
     }
     ul.addEventListener('click', listener);
 }

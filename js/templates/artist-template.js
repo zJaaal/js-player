@@ -1,6 +1,4 @@
-import { html } from "lit-html";
-
-export default (artist) => html` 
+export default (artist) => ` 
     <section class="a-header flex">
         <div class="flex h-100">
             <div class="flex h-100 center ml-10 mr-4">
