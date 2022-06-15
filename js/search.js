@@ -87,4 +87,4 @@ const drawSearchResult = async (e) =>{
     artistsResult.addEventListener("click", artistsListener);
 }
 
-searchBar.addEventListener("input",debounce(drawSearchResult,1000));
+searchBar.addEventListener("keypress", debounce(drawSearchResult, 1000));
