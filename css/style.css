@@ -42,6 +42,12 @@ ul {
     line-height: 1.235;
     letter-spacing: 0.00735em;
 }
+.text-big{
+    font-weight: 400;
+    font-size: 4.230rem;
+    line-height: 1.235;
+    letter-spacing: 0.00735em;
+}
 .text-subtitle {
     font-weight: 400;
     font-size: 1rem;
@@ -70,6 +76,12 @@ ul {
     line-height: 1.66;
     letter-spacing: 0.03333em;
     display: block;
+}
+.text-bold{
+    font-weight: bold;
+}
+.text-wide{
+    font-weight: 500;
 }
 /* Overflow Wrap */
 .text-wrap {
@@ -173,12 +185,16 @@ ul {
     padding-bottom: 30px;
     height: 50%;
     min-width: 215px;
+    transition: transform ease-in-out 0.3s;
+}
+.album-art:hover{
+    transform: scale(1.05);
 }
 .album-art-image {
     width: auto;
     height: auto;
-    max-width: 180px;
-    max-height: 180px;
+    max-width: 150px;
+    max-height: 150px;
 }
 .album-icon {
     font-size: 10px;
@@ -213,13 +229,105 @@ ul {
     background-color: #20201D;
     font-weight: 900;
 }
-
 .icon {
     color: white;
     margin-left: 5px;
     margin-right: 5px;
 }
+/* Artist Display */
+#artist-content{
+    overflow-y: scroll;
+}
+#artist-content::-webkit-scrollbar{
+    width: 8px;
+    -webkit-appearance: none;
+}
+#artist-content::-webkit-scrollbar-thumb{
+    background-color: #20201D;
+    border-radius: 24px;
+}
+.track-image{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.related-artist{
+    padding: 8px;
+    padding-top: 0px;
+    padding-bottom: 25px;
+    height: 50%;
+    min-width: 200px;
+    width: 200px;
+    text-align: center;
+    transition: transform ease-in-out 0.3s;
+}
+.related-artist:hover{
+    transform: scale(1.05);
+}
+#related-artists{
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    background-image: linear-gradient(#2a2925 30% ,#20201D 70% );
+}
+.related-artist-image{
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+    max-width: 230px;
+    max-height: 230px;
+}
+.a-header {
+    height: 50%;
+    opacity: 1;
+    /* background-image:  repeating-radial-gradient(circle at center 0, transparent 0, #058C4240 45px ), repeating-linear-gradient( #2A292510, #2A2925 );*/
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;    
+    background-image: linear-gradient(#20201D 30% ,#2a2925 70% );
+}
+.a-header img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.header-image{
+    margin-left:calc(var(--margin-size)*10);
+    margin-right:calc(var(--margin-size)*4);
+}
+.a-header h6 {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0px;
+}
+.a-header p {
+    font-size: 16px;
+}
+.a-header span {
+    font-size: 16px;
+}
 
+/* Search Display */
+#search-content{
+    overflow-y: scroll;
+}
+#search-content::-webkit-scrollbar{
+    width: 8px;
+    -webkit-appearance: none;
+}
+#search-content::-webkit-scrollbar-thumb{
+    background-color: #20201D;
+    border-radius: 24px;
+}
+#tracks-section {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;   
+    background-image: linear-gradient(#20201D 30% ,#2a2925 70% );
+}
+#artists-section {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;   
+    background-image: linear-gradient(#2a2925 30% ,#20201D 70% );
+}
 /* House Icon */
 .house-icon {
     font-size: 15px;
@@ -251,7 +359,45 @@ ul {
 }
 
 /* // X-Small devices (portrait phones, less than 576px) */
-@media (min-width: 576px) {
+@media (max-width: 576px) {
+    /* artist responsive display */
+    .a-header p {
+        display: none;
+    }
+    .a-header span {
+        display: none;
+    }
+    .a-header h6{
+        font-size: 30px;
+
+    }
+    .a-header div{
+        justify-content: center;
+        align-items: center;
+    }
+    .a-header>div{
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .a-header img{
+        margin-top: 5px;
+        width: 130px;
+        height: 130px;
+    }
+    .header-image{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .a-header{
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    /* Making the titles more little */
+    .text-title{
+        font-size: 1.6rem;
+    }
 }
 
 /* // Medium devices (tablets, 768px and up) */
