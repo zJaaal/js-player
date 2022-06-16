@@ -44,6 +44,24 @@
 .ml-4 {
     margin-left: calc(var(--margin-size) * 4);
 }
+.ml-5 {
+    margin-left: calc(var(--margin-size) * 5);
+}
+.ml-6 {
+    margin-left: calc(var(--margin-size) * 6);
+}
+.ml-7 {
+    margin-left: calc(var(--margin-size) * 7);
+}
+.ml-8 {
+    margin-left: calc(var(--margin-size) * 8);
+}
+.ml-9 {
+    margin-left: calc(var(--margin-size) * 9);
+}
+.ml-10 {
+    margin-left: calc(var(--margin-size) * 10);
+}
 
 .mb {
     margin-bottom: var(--margin-size);
