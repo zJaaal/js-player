@@ -79,4 +79,56 @@ export const getAlbumInfo = (id) =>{
         })
         .catch(reject)
     });
+<<<<<<< Updated upstream
 }
+=======
+}
+
+export const getArtistInfo = (id)=>{
+    const cache = JSON.parse(localStorage.getItem(id+"-artist"));
+    if(cache) return Promise.resolve(cache);
+
+    return Promise.all([Promise.resolve(Utils.getArtistById(id)),
+                            Promise.resolve(Utils.getTopSongsByArtistId(id)),
+                            Promise.resolve(Utils.getAlbumsByArtistId(id)),
+                            Promise.resolve(Utils.getRelatedArtists(id))
+                        ]).then(data => {  
+                            localStorage.setItem(id+"-artist",JSON.stringify(data))
+                            return data;
+                        }).catch(error =>{
+                            alert("An error occured while fetching Artist Info");
+                            console.log(error);
+                        });
+}
+
+export const getSearchResult = (str) =>{
+    if(!str) return;
+    
+    return new Promise((res, err)=>{
+        Utils.getResult(str).then(data => {
+            res(data);
+        }).catch(err)
+    });
+}
+
+export const getTrack =(id)=>{
+    const cache = JSON.parse(localStorage.getItem(id+"-track"));
+    if(cache) return Promise.resolve(cache);
+
+    return new Promise((res, err)=>
+    Utils.getTrackById(id).then(data=>{
+        localStorage.setItem(id+"-track", JSON.stringify(data));
+        res(data);
+    }).catch(err));
+}
+
+export function debounce(callback, wait) {
+    let timerId;
+    return (...args) => {
+      clearTimeout(timerId);
+      timerId = setTimeout(() => {
+        callback(...args);
+      }, wait);
+    };
+  }
+>>>>>>> Stashed changes

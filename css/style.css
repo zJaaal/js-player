@@ -14,7 +14,7 @@ ul {
 
 /* Theme */
 :root {
-    --primary: #058C42;
+    --primary: #6D3187;
     --secundary: #de3a3a;
     --background: #161615;
     --background-shade: #2a2925;
@@ -114,7 +114,33 @@ ul {
 .player {
     min-height: 150px;
 }
+.player-button{
+    color:#30163c;
+    align-self: flex-end;
+}
+.player-button:hover {
+    color: #24112d;
+}
+#music-volume{
+    align-self: flex-end;
+    -webkit-appearance: none;
+    border-radius: 10px;
+    background-color: var(--background-shade);
+    height: 5px;
+}
+#music-volume::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  height: 15px;
+  width:  15px;
+  border-radius: 100%;
+  background-color: #30163C;   
+}
 
+#music-volume::-webkit-slider-runnable-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
 /* Search bar */
 .search-bar-icon {
     position: absolute;
