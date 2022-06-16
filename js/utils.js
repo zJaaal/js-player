@@ -79,10 +79,9 @@ export const getAlbumInfo = (id) =>{
         })
         .catch(reject)
     });
-<<<<<<< Updated upstream
+
 }
-=======
-}
+
 
 export const getArtistInfo = (id)=>{
     const cache = JSON.parse(localStorage.getItem(id+"-artist"));
@@ -130,5 +129,4 @@ export function debounce(callback, wait) {
         callback(...args);
       }, wait);
     };
-  }
->>>>>>> Stashed changes
+}
