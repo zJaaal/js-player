@@ -24,11 +24,11 @@ export const playTrack = async (id, tracklist = [], currentTrack = 0, shuffle = 
 
     //"Disable" controls that doesn't work when its not a playlist
     if(!isPlaylist){
-        document.querySelector("#next").style.color = "#BA307C";
+        document.querySelector("#next").style.color = "#de3a3a";
 
-        document.querySelector("#back").style.color = "#BA307C";
+        document.querySelector("#back").style.color = "#de3a3a";
 
-        document.querySelector("#shuffle").style.color = "#BA307C";
+        document.querySelector("#shuffle").style.color = "#de3a3a";
     }
     //Controls actions
     const controls ={

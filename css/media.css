@@ -104,3 +104,17 @@
 .mr-4 {
     margin-right: calc(var(--margin-size) * 4);
 }
+
+/* Padding */
+.pl {
+    padding-left: var(--margin-size);
+}
+.pl-2 {
+    padding-left: calc(var(--margin-size) * 2);
+}
+.pl-3 {
+    padding-left: calc(var(--margin-size) * 3);
+}
+.pl-4 {
+    padding-left: calc(var(--margin-size) * 4);
+}

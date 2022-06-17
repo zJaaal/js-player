@@ -1,7 +1,7 @@
 import { getDuration } from "../utils";
 
 export default (track)=>` 
-<li class="flex pointer mb-2" data-trackid="${track.id}">
+<li class="flex pointer mb-2 pl" data-trackid="${track.id}">
     <div class="flex grow middle track">
         <img class="track-image" src="${track.album.cover}" alt="${track.album.title + " cover art"}">
         <div class="flex grow column ml-2">

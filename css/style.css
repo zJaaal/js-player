@@ -14,10 +14,10 @@ ul {
 
 /* Theme */
 :root {
-    --primary: #6D3187;
-    --secundary: #de3a3a;
-    --background: #161615;
-    --background-shade: #2a2925;
+    --primary: #380036;
+    --secundary:#0CBABA;
+    --warning: #de3a3a;
+    --background: #2a2925;
     --font: #e7e7e7;
     --complementary: #2e2c2f;
 
@@ -29,10 +29,10 @@ ul {
     color: var(--font);
 }
 .text-select {
-    color: var(--primary);
+    color: var(--secundary);
 }
 .text-warning {
-    color: var(--secundary);
+    color: var(--warning);
 }
 
 /* Font variants*/
@@ -94,12 +94,12 @@ ul {
     background-color: var(--background);
 }
 .bg-secondary {
-    background-color: var(--background-shade);
+    background-color:  var(--background);
 }
 .bg-complementary {
     background-color: var(--complementary);
 }
-.bg-green {
+.bg-blue {
     background-color: var(--primary);
 }
 
@@ -121,13 +121,16 @@ ul {
 .pointer {
     cursor: pointer;
 }
-
+/* Main */
+.main{
+    background-color:var(--primary);
+}
 /* Player */
 .player {
     min-height: 150px;
 }
 .player-button{
-    color:#30163c;
+    color:var(--secundary);
     align-self: flex-end;
 }
 .player-button:hover {
@@ -137,14 +140,14 @@ ul {
     color: var(--font);
 }
 #volume {
-    color:#30163c;
+    color:var(--secundary);
     align-self: flex-end;
 }
 #music-volume{
     align-self: center;
     -webkit-appearance: none;
     border-radius: 10px;
-    background-color: var(--background-shade);
+    background-color:  var(--background);
     height: 5px;
 }
 #music-volume::-webkit-slider-thumb {
@@ -152,7 +155,7 @@ ul {
   height: 15px;
   width:  15px;
   border-radius: 100%;
-  background-color: #30163C;   
+  background-color:var(--secundary);   
 }
 
 #music-volume::-webkit-slider-runnable-track {
@@ -166,7 +169,7 @@ ul {
     height: 15px;
     width:  15px;
     border-radius: 100%;
-    background-color: #30163C; 
+    background-color: var(--secundary); 
 }
 #music-volume::-moz-range-track {
     box-shadow: none;
@@ -184,8 +187,16 @@ ul {
     height: 15px;
     width:  15px;
     border-radius: 100%;
-    background-color: #30163C; 
+    background-color: var(--secundary); 
 }
+/* Right aside */
+li .del-icon {
+    display: none;
+}
+li:hover .del-icon {
+    display: inline;
+}
+
 /* Search bar */
 .search-bar-icon {
     position: absolute;
@@ -368,7 +379,7 @@ ul {
 }
 
 #home-button:hover {
-    color: var(--primary);
+    color: var(--secundary);
     font-weight: 500;
 }
 
@@ -383,7 +394,7 @@ ul {
 }
 
 #menu li:hover .menu-icon {
-    color: var(--primary);
+    color: var(--secundary);
 }
 
 /* Initial Value */
