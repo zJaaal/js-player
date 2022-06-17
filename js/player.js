@@ -2,12 +2,11 @@ import playerTemplate from "./templates/player-template";
 import { getTrack } from "./utils";
 
 export const playTrack = async (id, tracklist = [], currentTrack = 0, shuffle = false)=>{
-
     const player = document.querySelector("#player");
 
     const track = await getTrack(id);
 
-    let isPlaylist = !!tracklist.length;
+    let isPlaylist = !!tracklist.length && tracklist.length == 1 ? false: !!tracklist.length;
     let isShuffle = shuffle;
 
     player.innerHTML = playerTemplate(track.data);
@@ -83,19 +82,20 @@ export const playTrack = async (id, tracklist = [], currentTrack = 0, shuffle = 
         },
         "next":()=>{
             if(isPlaylist){
+                clearInterval(interval);
                 if(++currentTrack == tracklist.length)
                     currentTrack = 0;
-                if(isShuffle){
-                    currentTrack = Math.floor(Math.random() * tracklist.length);
-                    playTrack(tracklist[currentTrack].id, tracklist, currentTrack, true);
-                    return;
-                }
-
+                    if(isShuffle){
+                        currentTrack = Math.floor(Math.random() * tracklist.length);
+                        playTrack(tracklist[currentTrack].id, tracklist, currentTrack, true);
+                        return;
+                    }
                 playTrack(tracklist[currentTrack].id, tracklist, currentTrack);
             }
         },
         "back":()=>{
             if(isPlaylist){
+                clearInterval(interval);
                 if(--currentTrack == 0)
                     currentTrack = tracklist.length - 1;
 
@@ -104,7 +104,6 @@ export const playTrack = async (id, tracklist = [], currentTrack = 0, shuffle = 
                     playTrack(tracklist[currentTrack].id, tracklist, currentTrack, true);
                     return;
                 }
-
                 playTrack(tracklist[currentTrack].id, tracklist, currentTrack);
             }
         } 
@@ -161,11 +160,12 @@ export const playTrack = async (id, tracklist = [], currentTrack = 0, shuffle = 
     playerRange.removeEventListener('input', rangeListener)
     playerRange.addEventListener('input', rangeListener);
 
-    // No se bien como funciona esto, asi que lo puse aqui, y agarra xd
     if(!interval){
+        document.querySelector("#progress").value = "0:00";
         interval = setInterval(function(){
             document.querySelector(":root").style.setProperty('--value', Math.trunc(audio.currentTime))
             playerRange.value = Math.trunc(audio.currentTime);
+            document.querySelector("#progress").value = Math.trunc(audio.currentTime) >=10 ? "0:"+`${Math.trunc(audio.currentTime)}` : "0:0"+`${Math.trunc(audio.currentTime)}`
         }, [300])
     }
 }

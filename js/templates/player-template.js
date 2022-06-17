@@ -1,13 +1,15 @@
 export default (track) =>` 
 <div class="container mt-4">
     <div class="flex left">
-      <img  class="player-image" src="${track.album.cover}" alt="">
+      <img  class="player-image rotate" src="${track.album.cover}" alt="">
       <audio autoplay id="audio" src="${track.preview}" style="display:none;"></audio>          
       <div class="flex grow column ml-2" id="player-controls">
         <p class="text-primary text-body text-wide">${track.title}</p>
         <p class="text-primary text-body">${track.artist.name}</p>
-        <div class="flex grow">
+        <div class="flex grow center">
+          <input disabled class="text-primary" type="text" id="progress" value="0:00"></input>
           <input type="range" class="styled-slider slider-progress" min="0" value="0" max="30" style="width: 100%" />
+          <p class="text-primary text-caption ml-2">0:30</p>
         </div>
         <div class="flex around mt-4">
           <span class="player-button pointer">
