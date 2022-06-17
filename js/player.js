@@ -13,6 +13,8 @@ export const playTrack = async (id, tracklist = [], currentTrack = 0, shuffle = 
     player.innerHTML = playerTemplate(track.data);
 
     const playerControl = document.querySelector("#player-controls");
+    const playerRange = document.querySelector('input[type="range"]');
+
     //controls
     const audio = document.querySelector("#audio");
     const play = document.querySelector("#play");
@@ -30,6 +32,9 @@ export const playTrack = async (id, tracklist = [], currentTrack = 0, shuffle = 
 
         document.querySelector("#shuffle").style.color = "#de3a3a";
     }
+
+    let interval;
+
     //Controls actions
     const controls ={
         "play": ()=>{  
@@ -42,9 +47,11 @@ export const playTrack = async (id, tracklist = [], currentTrack = 0, shuffle = 
                     pause.style.display = "none";
                     play.style.display = "inline";
                     audio.pause();
+                    clearInterval(interval);
                 }
         },
-        "pause": ()=>{  
+        "pause": ()=>{
+            clearInterval(interval);
             if(audio.paused){
                 play.style.display = "none";
                 pause.style.display = "inline";
@@ -130,16 +137,35 @@ export const playTrack = async (id, tracklist = [], currentTrack = 0, shuffle = 
     }
 
     function endedListener(){
-        if(!audio.loop)
-            controls["next"]();
+        if(!audio.loop){
+            controls["next"]()
+        }
+        clearInterval(interval)
+    }
+
+    function rangeListener(evt){
+        document.querySelector(":root").style.setProperty('--value', Math.trunc(evt.target.value))
+        audio.currentTime = evt.target.value;
+        playerRange.value = evt.target.value
     }
 
     audio.removeEventListener("ended", endedListener);
     audio.addEventListener("ended", endedListener);
 
-    volume.removeEventListener("change", volumeListener);
-    volume.addEventListener("change", volumeListener);
+    volume.removeEventListener("input", volumeListener);
+    volume.addEventListener("input", volumeListener);
     
     playerControl.removeEventListener("click", playerListener);
     playerControl.addEventListener("click", playerListener);
+
+    playerRange.removeEventListener('input', rangeListener)
+    playerRange.addEventListener('input', rangeListener);
+
+    // No se bien como funciona esto, asi que lo puse aqui, y agarra xd
+    if(!interval){
+        interval = setInterval(function(){
+            document.querySelector(":root").style.setProperty('--value', Math.trunc(audio.currentTime))
+            playerRange.value = Math.trunc(audio.currentTime);
+        }, [300])
+    }
 }

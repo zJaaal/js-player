@@ -3,10 +3,12 @@ export default (track) =>`
     <div class="flex left">
       <img  class="player-image" src="${track.album.cover}" alt="">
       <audio autoplay id="audio" src="${track.preview}" style="display:none;"></audio>          
-      <div class="flex column ml-2" id="player-controls">
+      <div class="flex grow column ml-2" id="player-controls">
         <p class="text-primary text-body text-wide">${track.title}</p>
         <p class="text-primary text-body">${track.artist.name}</p>
-        <p class="text-primary text-body">Here goes the progress bar</p>
+        <div class="flex grow">
+          <input type="range" class="styled-slider slider-progress" min="0" value="0" max="30" style="width: 100%" />
+        </div>
         <div class="flex around mt-4">
           <span class="player-button pointer">
             <i class="fa-solid fa-backward-step" id="back"></i>
