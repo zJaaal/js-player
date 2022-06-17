@@ -75,6 +75,9 @@
 .mb-4 {
     margin-bottom: calc(var(--margin-size) * 4);
 }
+.mb-6 {
+    margin-bottom: calc(var(--margin-size) * 6);
+}
 
 .mt {
     margin-top: var(--margin-size);

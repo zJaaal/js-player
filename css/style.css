@@ -133,8 +133,15 @@ ul {
 .player-button:hover {
     color: #24112d;
 }
-#music-volume{
+.player-button-active {
+    color: var(--font);
+}
+#volume {
+    color:#30163c;
     align-self: flex-end;
+}
+#music-volume{
+    align-self: center;
     -webkit-appearance: none;
     border-radius: 10px;
     background-color: var(--background-shade);
@@ -152,6 +159,32 @@ ul {
     box-shadow: none;
     border: none;
     background: transparent;
+}
+
+#music-volume::-moz-range-thumb {
+    -moz-appearance: none; 
+    height: 15px;
+    width:  15px;
+    border-radius: 100%;
+    background-color: #30163C; 
+}
+#music-volume::-moz-range-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+#music-volume::-ms-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+#music-volumen::-ms-thumb {
+    -ms-appearance: none; 
+    height: 15px;
+    width:  15px;
+    border-radius: 100%;
+    background-color: #30163C; 
 }
 /* Search bar */
 .search-bar-icon {
