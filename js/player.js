@@ -159,21 +159,22 @@ export const playTrack = async (
   playerRange.removeEventListener("input", rangeListener);
   playerRange.addEventListener("input", rangeListener);
 
-    //Initialize interval every time its needed
-    function startInterval(){
-        interval = setInterval(
-            function () {
-                let currentTime = Math.trunc(audio.currentTime);
-                document
-                    .querySelector(":root")
-                    .style.setProperty("--value", currentTime);
-                playerRange.value = currentTime;
-                document.querySelector("#progress").value =
-                    currentTime >= 10
-                    ? "0:" + `${currentTime}`
-                    : "0:0" + `${currentTime}`;
-            },
-            [300]
-        );
-    }
+  //Initialize interval every time its needed
+  function startInterval() {
+    interval = setInterval(
+      function () {
+        const audio = document.querySelector("#audio");
+        let currentTime = Math.trunc(audio.currentTime);
+        document
+          .querySelector(":root")
+          .style.setProperty("--value", currentTime);
+        playerRange.value = currentTime;
+        document.querySelector("#progress").value =
+          currentTime >= 10
+            ? "0:" + `${currentTime}`
+            : "0:0" + `${currentTime}`;
+      },
+      [300]
+    );
+  }
 };
