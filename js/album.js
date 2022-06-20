@@ -2,6 +2,7 @@ import { getAlbumInfo } from "./utils";
 import { drawArtist } from "./artist";
 import albumTemplate from "./templates/album-template";
 import albumTracksTemplate from "./templates/album-tracks-template";
+import { playTrack } from "./player";
 export const drawAlbumPage = async (id) =>{
     try{
         const content = document.querySelector("#album-content");
@@ -25,11 +26,9 @@ const drawTrackList = (tracks) => {
     function trackListener (evt){
         const track =  evt.path.find(path => path.tagName === "LI");
         const playIcon = evt.path.find(path => path.tagName ==="I");
-
         if(!track) return console.log("Didn't selected a song");
         if(playIcon) return console.log("Playing song: "+ track.dataset.trackid);
-
-        console.log("You selected: " + track.dataset.trackid);
+        playTrack(track.dataset.trackid, tracks, tracks.findIndex(x => x.id == track.dataset.trackid));
     }
     function albumListener (evt){
         const artist = evt.path.find(path => path.tagName ==="P");

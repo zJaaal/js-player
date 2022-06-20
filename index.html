@@ -21,7 +21,7 @@
     <title>JS Player</title>
   </head>
   <body>
-    <main class="h-100 flex column" style="background-color: var(--primary)">
+    <main class="h-100 flex column main">
       <!-- Content -->
       <div class="paper flex grow">
 
@@ -86,46 +86,6 @@
 
       <!-- Footer -->
       <div class="flex player" id="player">
-        <div class="container mt-4">
-          <div class="flex left">
-            <img
-              class="player-image"
-              src="https://api.deezer.com/album/146682982/image"
-              alt=""
-            />
-            <audio
-              id="audio"
-              src="https://cdns-preview-4.dzcdn.net/stream/c-485ce63904804018c8241ab74a6babc3-3.mp3"
-              style="display: none"
-            ></audio>
-            <div class="flex column ml-2">
-              <p class="text-primary text-body text-wide">Reckless</p>
-              <p class="text-primary text-body">Cotis</p>
-              <p class="text-primary">here should go a track progress bar</p>
-              <div class="flex around mt-4">
-                <span class="player-button pointer" id="back">
-                  <i class="fa-solid fa-backward-step"></i>
-                </span>
-                <span class="player-button pointer" id="play">
-                  <i class="fa-solid fa-play" id="playBtn"></i>
-                  <i class="fa-solid fa-pause" style="display: none"></i>
-                </span>
-                <span class="player-button pointer" id="forward">
-                  <i class="fa-solid fa-forward-step"></i>
-                </span>
-              </div>
-            </div>
-            <input
-              value="50"
-              type="range"
-              min="0"
-              max="100"
-              name="volume"
-              id="music-volume"
-              class="mb-2 pointer"
-            />
-          </div>
-        </div>
       </div>
     </main>
   </body>
