@@ -454,6 +454,7 @@ li:hover .del-icon {
         justify-content: center;
         align-items: center;
         margin-bottom: 10px;
+        height: 40%;
     }
     /* Making the titles more little */
     .text-title{
@@ -462,7 +463,7 @@ li:hover .del-icon {
 
     /* Player responsive display */
     .text-body {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     .player-image {
         height: 80px;
@@ -470,6 +471,14 @@ li:hover .del-icon {
     }
     #volume {
         display: none;
+    }
+    /* Album responsive display */
+    .album-big-image {
+        height: 130px;
+        width: 130px;
+    }
+    #album > section {
+        width: 190px !important;
     }
 }
 
