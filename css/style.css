@@ -340,7 +340,7 @@ ul {
     font-size: 15px;
 }
 .house-icon:hover {
-    color: var(--primary);
+    color: var(--secundary);
 }
 
 /* Initial Value */
