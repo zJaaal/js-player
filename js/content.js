@@ -1,4 +1,4 @@
-import { basicArtist, getAlbumInfo } from "./utils";
+import { basicArtist } from "./utils";
 import { drawAlbumPage } from "./album";
 import contentTemplate from "./templates/content-template";
 import { drawArtist } from "./artist";

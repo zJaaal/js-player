@@ -3,105 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <!-- <link rel="icon" type="image/svg+xml" href="favicon.svg" /> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d34ae7d623.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/media.css" media="All">
-    <link rel="stylesheet" type="text/css" href="css/loader.css" media="All">
-    <link rel="stylesheet" type="text/css" href="css/flex.css" media="All">
-    <link rel="stylesheet" type="text/css" href="css/style.css" media="All">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d34ae7d623.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="css/media.css" media="All" />
+    <link rel="stylesheet" type="text/css" href="css/loader.css" media="All" />
+    <link rel="stylesheet" type="text/css" href="css/flex.css" media="All" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="All" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Player</title>
   </head>
   <body>
     <main class="h-100 flex column main">
-
       <!-- Content -->
       <div class="paper flex grow">
 
         <!-- Left Aside -->
-        <div id="left-aside" class="h-100 flex column min-width-200 bg-secondary">
-          <div class="flex grow min-height-50">
-            .
-          </div>
-          <!-- Menu -->
-          <ul class="h-100 flex column ml-4" id="menu">
-            <li class="mb-3">
-              <div class="flex grow middle pointer" id="home">
-                <span class="house-icon icon">
-                  <i class="fa-solid fa-house"></i>
-                </span>
-                <p class="text-primary text-button">Home</p>
-              </div>
-            </li>
-            <li class="mb-3">
-              <div class="flex grow middle pointer">
-                <span class="menu-icon icon">
-                  <i class="fa-solid fa-chart-line"></i>
-                </span>
-                <p class="text-primary text-button">Top Tracks</p>
-              </div>
-            </li>
-            <li class="mb-3">
-              <div class="flex grow middle pointer">
-                <span class="menu-icon icon">
-                  <i class="fa-solid fa-user"></i>
-                </span>
-                <p class="text-primary text-button">Top Artists</p>
-              </div>
-            </li>
-            <li class="mb-3">
-              <div class="flex grow middle pointer">
-                <span class="menu-icon icon">
-                  <i class="fa-solid fa-compact-disc"></i>
-                </span>
-                <p class="text-primary text-button">Top Albums</p>
-              </div>
-            </li>
-            <li class="mb-3">
-              <div class="flex grow middle pointer">
-                <span class="menu-icon icon">
-                  <i class="fa-solid fa-user-clock"></i>
-                </span>
-                <p class="text-primary text-button">New Artists</p>
-              </div>
-            </li>
-            <li class="mb-3">
-              <div class="flex grow middle pointer">
-                <span class="menu-icon icon">
-                  <i class="fa-solid fa-shuffle"></i>
-                </span>
-                <p class="text-primary text-button">Surprise Me!</p>
-              </div>
-            </li>
-            <li class="mb-3">
-              <div class="flex grow middle pointer">
-                <span class="menu-icon icon">
-                  <i class="fa-solid fa-clock-rotate-left"></i>
-                </span>
-                <p class="text-primary text-button">History</p>
-              </div>
-            </li>
-          </ul>
+        <div
+          id="left-aside"
+          class="flex column center bg-secondary min-width-200"
+        >
+        <h2 class="text-primary">JS Player</h2>
+        <img class="my-profile-picture mt-4" src="https://avatars.githubusercontent.com/u/63567962?v=4" alt="zJaaal Profile Picture">
+            <p class="text-body text-primary">
+              Powered by
+              <span class="text-bold" style="color: #0cbaba; font-style: italic"
+                >zJaaal</span
+              >
+            </p>
         </div>
 
         <!-- Body -->
         <div class="flex grow column bg-secondary">
-
           <!-- Header -->
-          <header class="min-height-50">
+          <header class="flex min-height-50">
+            <div class="flex grow middle end pointer mr" id="home">
+              <span class="house-icon">
+                <i class="fa-solid fa-house"></i>
+              </span>
+            </div>
             <div class="container h-100">
               <div class="flex grow middle h-100 relative">
-                <input class="w-100 search-bar-input" type="text" name="search-bar" id="search-bar"
-                  placeholder="Artist, Album, Track">
-                <label class="search-bar-icon pointer text-primary" for="search-bar">
+                <input
+                  class="w-100 search-bar-input"
+                  type="text"
+                  name="search-bar"
+                  id="search-bar"
+                  placeholder="Artist, Album, Track"
+                />
+                <label
+                  class="search-bar-icon pointer text-primary"
+                  for="search-bar"
+                >
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </label>
               </div>
             </div>
           </header>
-          
+
           <!-- Center Content -->
           <div class="v-container container" id="content-container">
             <div class="h-100 flex wrap center" id="content"></div>
@@ -113,8 +79,7 @@
 
         <!-- Right ASide -->
         <div id="right-aside" class="flex column min-width-250 bg-secondary">
-          <div class="flex grow min-height-50">
-          </div>
+          <div class="flex grow min-height-50"></div>
           <ul class="mr-3 list"></ul>
         </div>
       </div>
