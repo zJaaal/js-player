@@ -3,7 +3,6 @@ import { drawContent } from "./content";
 import * as Utils from "./utils"
 
 (async function init(){
-    console.log(import.meta.env.VITE_KEY);
     try {
         const [ artists, albums ] = await Utils.getBasicData();
 
