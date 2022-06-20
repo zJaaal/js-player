@@ -17,7 +17,6 @@ export const drawContent = (albums, artists) =>{
   .sort(()=> Math.random() - 0.6)
 
   content.innerHTML = myAlbums.reduce((acc, album)=> acc + contentTemplate(album),"");
-
   function onClickAlbum(evt){
     const album = evt.path.find(path => path.tagName === "IMG");
     if(!album) return;

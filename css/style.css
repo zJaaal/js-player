@@ -469,6 +469,18 @@ li:hover .del-icon {
     .text-title{
         font-size: 1.6rem;
     }
+
+    /* Player responsive display */
+    .text-body {
+        font-size: 0.9rem;
+    }
+    .player-image {
+        height: 80px;
+        width: 80px;
+    }
+    #volume {
+        display: none;
+    }
 }
 
 /* // Medium devices (tablets, 768px and up) */
