@@ -5,7 +5,7 @@ export default (album) => `
         <span class="album-icon">
         <i class="fa-solid fa-user text-select"></i>
         </span>
-        <p class="text text-primary">${album.artist.name}</p>
+        <p class="text text-primary pointer" data-artistid="${album.artist.id}">${album.artist.name}</p>
     </div>
     <div class="flex">
         <span class="album-icon">

@@ -1,6 +1,7 @@
 import { basicArtist } from "./utils";
 import { drawAlbumPage } from "./album";
 import contentTemplate from "./templates/content-template";
+import { drawArtist } from "./artist";
 
 export const drawContent = (albums, artists) =>{
   const content = document.querySelector("#content");
@@ -16,7 +17,6 @@ export const drawContent = (albums, artists) =>{
   .sort(()=> Math.random() - 0.6)
 
   content.innerHTML = myAlbums.reduce((acc, album)=> acc + contentTemplate(album),"");
-
   function onClickAlbum(evt){
     const album = evt.path.find(path => path.tagName === "IMG");
     if(!album) return;
@@ -32,7 +32,12 @@ export const drawContent = (albums, artists) =>{
     document.querySelector("#artist-content").style.display ="none";
     document.querySelector("#search-content").style.display = "none";
   }
-
+  function onClickArtist(evt){
+    const artist = evt.path.find(path => path.tagName === "P");
+    if(!artist.dataset?.artistid) return;
+    drawArtist(artist.dataset.artistid);
+  }
   content.addEventListener("click", onClickAlbum);
   home.addEventListener("click", onClickHome)
+  content.addEventListener("click", onClickArtist);
 }

@@ -12,7 +12,7 @@ export default (key, artists)=> `
         </div>
         <div class="flex center">
             <span class="pointer text text-primary">
-            <i class="fa-solid fa-xmark"></i>
+                <i class="fa-solid fa-xmark del-icon"></i>
             </span>
         </div>
     </div>
