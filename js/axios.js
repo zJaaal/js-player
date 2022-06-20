@@ -4,8 +4,8 @@ import axios from "axios";
 const instance = axios.create({
     baseURL: 'https://deezerdevs-deezer.p.rapidapi.com/',
     headers: {
-        'X-RapidAPI-Host': import.meta.env.HOST,
-        'X-RapidAPI-Key': import.meta.env.KEY
+        'X-RapidAPI-Host': import.meta.env.VITE_HOST,
+        'X-RapidAPI-Key': import.meta.env.VITE_KEY
     }
 });
 
