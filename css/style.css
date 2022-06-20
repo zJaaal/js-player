@@ -209,7 +209,13 @@ ul {
     max-width: 225px;
     max-height: 225px;
 }
-
+.my-profile-picture {
+    width: auto;
+    height: auto;
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+}
 /* Album Display*/
 #tracklist{
     overflow-y: scroll;
@@ -330,26 +336,10 @@ ul {
 }
 /* House Icon */
 .house-icon {
+    color: var(--font);
     font-size: 15px;
-    margin-top: 2px;
 }
-
-#home-button:hover {
-    color: var(--primary);
-    font-weight: 500;
-}
-
-/* Menu */
-.menu-icon {
-    font-size: 15px;
-    margin-bottom: 2px;
-}
-
-#menu li:hover p {
-    font-weight: 900;
-}
-
-#menu li:hover .menu-icon {
+.house-icon:hover {
     color: var(--primary);
 }
 
@@ -407,7 +397,7 @@ ul {
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     #right-aside, #left-aside {
-        display: block;
+        display: flex;
     }
 }
 
