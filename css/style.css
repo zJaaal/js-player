@@ -419,8 +419,8 @@ li:hover .del-icon {
     display: none;
 }
 
-/* // X-Small devices (portrait phones, from 320px) */
-@media (min-width: 320px), (max-width: 768){
+/* // X-Small devices (phones) */
+@media (max-width: 480px){
     /* artist responsive display */
     .a-header p {
         display: none;
@@ -486,7 +486,7 @@ li:hover .del-icon {
 }
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     #home {
         padding-left: 15px;
     }
