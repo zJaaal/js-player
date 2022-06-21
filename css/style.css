@@ -420,7 +420,7 @@ li:hover .del-icon {
 }
 
 /* // X-Small devices (portrait phones, from 320px) */
-@media (min-width: 320px) {
+@media (min-width: 320px), (max-width: 768){
     /* artist responsive display */
     .a-header p {
         display: none;
