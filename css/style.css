@@ -410,6 +410,9 @@ li:hover .del-icon {
     color: var(--font);
     font-size: 15px;
 }
+#home {
+    padding-left: 3vw;
+}
 .house-icon:hover {
     color: var(--secundary);
 }
