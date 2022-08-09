@@ -108,7 +108,7 @@ export const playTrack = async (
   controls["play"](); //Play the song
 
   function playerListener(evt) {
-    const button = evt.path.find((path) => path.tagName === "I");
+    const button = evt.composedPath().find((path) => path.tagName === "I");
 
     if (!button) return;
 
